@@ -13,19 +13,19 @@ header{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    height: 12vh;
+    height: 4.5rem;
     margin: auto;
     background-color: #ec4c4c;
     z-index: 2;
 }
 
 #logo{
-    max-width: 20vh;
+    max-height: 4.5rem;
 }
 
 nav {
     width: 80%;
-    height: 12vh;
+    height: 4.5rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -35,9 +35,9 @@ nav {
 .header-link{
     text-decoration: none;
     color: black;
-    height: 100%;
+    height: 4.5rem;
     width: 25%;
-    line-height: 12vh;
+    line-height: 4.5rem;
     text-align: center;
 }
 
@@ -47,18 +47,19 @@ nav {
 }
 
 .header-link{  /*when hovered, nav links get a border which appears slowly*/
-    transition: border-bottom 1s;
     transition: border-bottom 0.2s linear;
+    transition: height 0.2s linear;
 }
 
 .header-link:hover{
     border-bottom: #ffc343 4px solid;
+    height: 4.25rem;
 }
 
 #hover-to-dropdown{
-    height: 100%;
+    height: 4.5rem;
     width: 25%;
-    line-height: 12vh;
+    line-height: 4.5rem;
     text-align: center;
 }
 
@@ -67,7 +68,7 @@ nav {
     color: black;
     height: 100%;
     width: 25%;
-    line-height: 12vh;
+    line-height: 4.5rem;
     text-align: center;
 }
 
@@ -84,14 +85,12 @@ nav {
 #hover-to-dropdown:hover #dropdown-content{ /*the hidden dropdown list appears*/
     display: flex;
     flex-direction: column;
-
-   
 }
 
 .dropdown-link{
     width: 100%;
-    height: 8vh;
-    line-height: 8vh;
+    height: 3rem;
+    line-height: 3rem;
     text-decoration: none;
     color: black;
     font-size: 1.2rem;
@@ -121,8 +120,8 @@ nav {
 
 main {
     width: 90vw;
-    height: 600px;
-    margin: 100px auto;
+    height: 37.5rem;
+    margin: 6.25rem auto;
     
     display: flex;
     justify-content: space-between;
@@ -140,7 +139,7 @@ main {
 }
 
 #slider {
-    height: 250px;
+    height: 15.625rem;
     border: 1px solid black;
     overflow: hidden;
     position: relative;
@@ -148,15 +147,15 @@ main {
 
 .slider-content {
     width: 25%;
-    height: 150px;
+    height: 9.375rem;
     border: 1px solid black;
     position: absolute;
-    top: 50px;
+    top: 3.125rem;
 }
 
 #slider button {
-    width: 30px;
-    height: 30px;
+    width: 1.875rem;
+    height: 1.875rem;
     position: absolute;
     margin: auto;
     top: 0;
@@ -172,14 +171,14 @@ main {
 }
 
 #top-rated {
-    height: 330px;
+    height: 20.625rem;
     border: 1px solid black;
 }
 
 #right {
     flex-basis: 20vw;
-    min-width: 170px;
-    margin-left: 20px;
+    min-width: 10.625rem;
+    margin-left: 1.25rem;
 
     display: flex;
     flex-direction: column;
@@ -188,12 +187,12 @@ main {
 }
 
 #best {
-    height: 380px;
+    height: 23.75rem;
     border: 1px solid black;
 }
 
 #facebook {
-    height: 200px;
+    height: 12.5rem;
     border: 1px solid black;
 }
 
@@ -209,21 +208,21 @@ footer{
 @media (max-width: 650px) {
     main {
         flex-direction: column;
-        height: 770px
+        height: 48.125rem;
     }
 
     #left {
-        height: 620px;
-        margin-bottom: 20px;
+        height: 38.75rem;
+        margin-bottom: 1.25rem;
     }
 
     #top-rated {
-        margin-top: 20px;
+        margin-top: 1.25rem;
     }
 
     #right {
         flex-direction: row;
-        height: 180px;
+        height: 11.25rem;
         margin: 0;
     }
 
