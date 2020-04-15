@@ -16,6 +16,7 @@ header{
     height: 12vh;
     margin: auto;
     background-color: #ec4c4c;
+    z-index: 2;
 }
 
 #logo{
@@ -121,7 +122,7 @@ nav {
 main {
     width: 90vw;
     height: 600px;
-    margin: 50px auto;
+    margin: 100px auto;
     
     display: flex;
     justify-content: space-between;
