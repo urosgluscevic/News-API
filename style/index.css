@@ -87,8 +87,6 @@ nav {
 #hover-to-dropdown:hover #dropdown-content{ /*the hidden dropdown list appears*/
     display: flex;
     flex-direction: column;
-
-   
 }
 
 .dropdown-link{
@@ -124,7 +122,7 @@ nav {
 
 main {
     width: 90vw;
-    height: 600px;
+    /* height: 20%; */
     margin: 100px auto;
     display: flex;
     justify-content: space-between;
@@ -141,8 +139,9 @@ main {
 }
 
 #slider {
-    height: 250px;
-    
+    height: 40%;
+    margin-top: auto;
+    margin-bottom: auto;
     overflow: hidden;
     position: relative;
 }
@@ -162,8 +161,6 @@ main {
     position: relative;
     border-radius: 20px;
 }
-
-
 
 #slider .controls {
     height: 100%;
@@ -205,8 +202,6 @@ main {
     color: #b3a4a2;
     font-weight: bold;
     transition: box-shadow 1s linear;
-    
-   
 }
 
 .slider-content button:hover {
@@ -215,7 +210,6 @@ main {
 
 .controlButtons img{
     width: 3em;
-    
 }
 
 .controlButtons {
@@ -224,7 +218,6 @@ main {
     width: 100%;
     position: absolute;
     top: 44%;
-    
 }
 
 #rightArrow {
@@ -269,7 +262,6 @@ main {
 
 #facebook {
     height: 200px;
-    border: 1px solid black;
     overflow: hidden;
 }
 
@@ -278,8 +270,12 @@ footer{
     height: 8vh;
     border: 2px solid black;
     margin: auto;
-
+    position: relative;
     background-color: chartreuse;
+}
+
+.fb-page{
+    width: 20vw;
 }
 
 @media (max-width: 650px) {
@@ -297,19 +293,29 @@ footer{
         margin-top: 20px;
     }
 
+    footer{
+        top: 23vh;
+    }
+
     #right {
-        flex-direction: row;
-        height: 180px;
+        flex-direction: column;
+        height: 380px;
         margin: 0;
+        /* margin-bottom: 20px; */
+        /* border :2px solid black; */
     }
 
     #best {
-        flex-basis: 55vw;
+        flex-basis: 110vw;
         height: 100%;
+        margin-bottom: 30px;
     }
 
     #facebook {
-        flex-basis: 30vw;
+        margin-top: auto;
+        flex-basis: 90vw;
         height: 100%;
+        width: auto;
+        margin: auto;
     }
 }
