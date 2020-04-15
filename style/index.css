@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+
+
+body{
+    margin: 0;
+    width: 100%;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+header{
+    top: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 12vh;
+    margin: auto;
+    background-color: #ec4c4c;
+    z-index: 2;
+}
+
+#logo{
+    max-width: 20vh;
+}
+
+nav {
+    width: 80%;
+    height: 12vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-link{
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    width: 25%;
+    line-height: 12vh;
+    text-align: center;
+}
+
+.header-link:hover{  /*links in the nav-bar change their colour when hovered*/
+    background-color: #b63838;
+    color: blanchedalmond;
+}
+
+.header-link{  /*when hovered, nav links get a border which appears slowly*/
+    transition: border-bottom 1s;
+    transition: border-bottom 0.2s linear;
+}
+
+.header-link:hover{
+    border-bottom: #ffc343 4px solid;
+}
+
+#hover-to-dropdown{
+    height: 100%;
+    width: 25%;
+    line-height: 12vh;
+    text-align: center;
+}
+
+.link-to-dropdown{
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    width: 25%;
+    line-height: 12vh;
+    text-align: center;
+}
+
+#hover-to-dropdown:hover{
+    background-color: #b63838;
+    color: blanchedalmond;
+    border-bottom: #ffc343 4px solid;
+}
+
+#dropdown-content{ /*dropdown list, which appears only when ABOUT (id="hover-to-dropdown") is hovered*/
+    display: none;
+}
+
+#hover-to-dropdown:hover #dropdown-content{ /*the hidden dropdown list appears*/
+    display: flex;
+    flex-direction: column;
+
+   
+}
+
+.dropdown-link{
+    width: 100%;
+    height: 8vh;
+    line-height: 8vh;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    background-color: #b63838;
+    border-top: 1px solid black;
+
+    opacity: 0.1;
+
+    animation-name: animate; 
+    animation-duration: 1s;
+    animation-fill-mode: forwards; /*animation does not reset after it is done*/
+}
+
+@keyframes animate{  /*gradually increase the opacity of the dropdown list once it is shown*/
+    0%{
+        opacity: 0.1;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.dropdown-link:hover{
+    color: blanchedalmond;
+}
+
+main {
+    width: 90vw;
+    height: 600px;
+    margin: 100px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+#left {
+    flex-basis: 67vw;
+    flex-shrink: 5;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+#slider {
+    height: 250px;
+    
+    overflow: hidden;
+    position: relative;
+}
+
+.Hot-News {
+    
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.slider-content{
+    margin: 0 0 0 1% ;
+    min-width:  32%;
+    height: 100%;
+    
+    position: relative;
+    border-radius: 20px;
+}
+
+
+
+#slider .controls {
+    height: 100%;
+}
+
+.slider-content img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.slider-content h3 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(90, 90, 90, 0.658); 
+    width: 100%;
+    font-family: lato;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+.slider-content button {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-decoration: none;
+    background-color: white;
+    border-radius: 20px;
+    border: #ffc343 4px solid;
+    padding: 1em 1.5em;
+    font-family: roboto;
+    color: #b3a4a2;
+    font-weight: bold;
+    transition: box-shadow 1s linear;
+    
+   
+}
+
+.slider-content button:hover {
+    box-shadow: 2px 10px 120px 23px rgba(255,217,0,1);
+}
+
+.controlButtons img{
+    width: 3em;
+    
+}
+
+.controlButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 44%;
+    
+}
+
+#rightArrow {
+    transform: scaleX(-1);
+}
+
+.controls {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.slider-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+#top-rated {
+    height: 330px;
+    border: 1px solid black;
+}
+
+#right {
+    flex-basis: 20vw;
+    min-width: 170px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+#best {
+    height: 380px;
+    border: 1px solid black;
+}
+
+#facebook {
+    height: 200px;
+    border: 1px solid black;
+}
+
+footer{
+    width: 90%;
+    height: 8vh;
+    border: 2px solid black;
+    margin: auto;
+
+    background-color: chartreuse;
+}
+
+@media (max-width: 650px) {
+    main {
+        flex-direction: column;
+        height: 770px
+    }
+
+    #left {
+        height: 620px;
+        margin-bottom: 20px;
+    }
+
+    #top-rated {
+        margin-top: 20px;
+    }
+
+    #right {
+        flex-direction: row;
+        height: 180px;
+        margin: 0;
+    }
+
+    #best {
+        flex-basis: 55vw;
+        height: 100%;
+    }
+
+    #facebook {
+        flex-basis: 30vw;
+        height: 100%;
+    }
+}
