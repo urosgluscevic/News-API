@@ -1,0 +1,188 @@
+body{
+    margin: 0;
+    width: 100%;
+    background-color: white;
+    overflow-x: hidden;
+}
+
+header{
+    top: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 12vh;
+    margin: auto;
+    background-color: #ec4c4c;
+}
+
+#logo{
+    max-width: 20vh;
+}
+
+nav {
+    width: 80%;
+    height: 12vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-link{
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    width: 25%;
+    line-height: 12vh;
+    text-align: center;
+}
+
+.header-link:hover{  /*links in the nav-bar change their colour when hovered*/
+    background-color: #b63838;
+    color: blanchedalmond;
+}
+
+.header-link{  /*when hovered, nav links get a border which appears slowly*/
+    transition: border-bottom 1s;
+    transition: border-bottom 0.2s linear;
+}
+
+.header-link:hover{
+    border-bottom: #ffc343 4px solid;
+}
+
+#hover-to-dropdown{
+    height: 100%;
+    width: 25%;
+    line-height: 12vh;
+    text-align: center;
+}
+
+.link-to-dropdown{
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    width: 25%;
+    line-height: 12vh;
+    text-align: center;
+}
+
+#hover-to-dropdown:hover{
+    background-color: #b63838;
+    color: blanchedalmond;
+    border-bottom: #ffc343 4px solid;
+}
+
+#dropdown-content{ /*dropdown list, which appears only when ABOUT (id="hover-to-dropdown") is hovered*/
+    display: none;
+}
+
+#hover-to-dropdown:hover #dropdown-content{ /*the hidden dropdown list appears*/
+    display: flex;
+    flex-direction: column;
+
+   
+}
+
+.dropdown-link{
+    width: 100%;
+    height: 8vh;
+    line-height: 8vh;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    background-color: #b63838;
+    border-top: 1px solid black;
+
+    opacity: 0.1;
+
+    animation-name: animate; 
+    animation-duration: 1s;
+    animation-fill-mode: forwards; /*animation does not reset after it is done*/
+}
+
+@keyframes animate{  /*gradually increase the opacity of the dropdown list once it is shown*/
+    0%{
+        opacity: 0.1;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.dropdown-link:hover{
+    color: blanchedalmond;
+}
+
+#slider-best-container{
+    width: 100%;
+    height: 45vh;
+    margin: auto;
+    margin-top: 8em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#slider{
+    width: 60%;
+    height: 45vh;
+    border: 2px solid black;
+    margin-left: 5%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-color: chartreuse;
+}
+
+.slider-content{
+    width: 25%;
+    height: 35vh;
+    border: 2px solid black;
+
+    background-color: chocolate;
+}
+
+#best{
+    width: 25%;
+    height: 65vh;
+    border: 2px solid black;
+    margin-right: 5%;
+}
+
+#top-rated{
+    width: 60%;
+    height: 45vh;
+    border: 2px solid black;
+    margin: 5vh 5%;
+}
+
+#facebook{
+    width: 25%;
+    height: 25vh;
+    border: 2px solid black;
+    float: right;
+    margin-right: 5%;
+
+    position: relative;
+
+    bottom: 30vh;
+}
+
+footer{
+    width: 90%;
+    height: 8vh;
+    border: 2px solid black;
+    margin: auto;
+
+    background-color: chartreuse;
+}
