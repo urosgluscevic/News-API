@@ -20,6 +20,7 @@ header{
     margin: auto;
     background-color: #ec4c4c;
     z-index: 2;
+    box-shadow: 0px 10px 11px -1px rgba(0,0,0,0.75);
 }
 
 #logo{
@@ -79,10 +80,12 @@ nav {
     background-color: #b63838;
     color: blanchedalmond;
     border-bottom: #ffc343 4px solid;
+    
 }
 
 #dropdown-content{ /*dropdown list, which appears only when ABOUT (id="hover-to-dropdown") is hovered*/
     display: none;
+    
 }
 
 #hover-to-dropdown:hover #dropdown-content{ /*the hidden dropdown list appears*/
@@ -101,11 +104,20 @@ nav {
     border-top: 1px solid black;
 
     opacity: 0.1;
-
+    
     animation-name: animate; 
     animation-duration: 1s;
     animation-fill-mode: forwards; /*animation does not reset after it is done*/
 }
+
+.dropdown-link:nth-child(3){
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+
 
 @keyframes animate{  /*gradually increase the opacity of the dropdown list once it is shown*/
     0%{
