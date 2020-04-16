@@ -20,6 +20,7 @@ header{
     margin: auto;
     background-color: #ec4c4c;
     z-index: 2;
+    box-shadow: 0px 10px 11px -1px rgba(0,0,0,0.75);
 }
 
 #logo{
@@ -79,10 +80,12 @@ nav {
     background-color: #b63838;
     color: blanchedalmond;
     border-bottom: #ffc343 4px solid;
+    
 }
 
 #dropdown-content{ /*dropdown list, which appears only when ABOUT (id="hover-to-dropdown") is hovered*/
     display: none;
+    
 }
 
 #hover-to-dropdown:hover #dropdown-content{ /*the hidden dropdown list appears*/
@@ -101,11 +104,20 @@ nav {
     border-top: 1px solid black;
 
     opacity: 0.1;
-
+    
     animation-name: animate; 
     animation-duration: 1s;
     animation-fill-mode: forwards; /*animation does not reset after it is done*/
 }
+
+.dropdown-link:nth-child(3){
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+
 
 @keyframes animate{  /*gradually increase the opacity of the dropdown list once it is shown*/
     0%{
@@ -123,7 +135,7 @@ nav {
 
 main {
     width: 90vw;
-    height: 600px;
+    /* height: 20%; */
     margin: 100px auto;
     display: flex;
     justify-content: space-between;
@@ -140,8 +152,9 @@ main {
 }
 
 #slider {
-    height: 250px;
-    
+    height: 40%;
+    margin-top: auto;
+    margin-bottom: auto;
     overflow: hidden;
     position: relative;
 }
@@ -161,8 +174,6 @@ main {
     position: relative;
     border-radius: 20px;
 }
-
-
 
 #slider .controls {
     height: 100%;
@@ -204,8 +215,6 @@ main {
     color: #b3a4a2;
     font-weight: bold;
     transition: box-shadow 1s linear;
-    
-   
 }
 
 .slider-content button:hover {
@@ -214,7 +223,6 @@ main {
 
 .controlButtons img{
     width: 3em;
-    
 }
 
 .controlButtons {
@@ -223,7 +231,6 @@ main {
     width: 100%;
     position: absolute;
     top: 44%;
-    
 }
 
 #rightArrow {
@@ -267,8 +274,8 @@ main {
 }
 
 #facebook {
+    overflow: hidden;
     height: 12.5rem;
-    border: 1px solid black;
 }
 
 footer{
@@ -276,8 +283,12 @@ footer{
     height: 8vh;
     border: 2px solid black;
     margin: auto;
-
+    position: relative;
     background-color: chartreuse;
+}
+
+.fb-page{
+    width: 20vw;
 }
 
 @media (max-width: 650px) {
@@ -295,19 +306,29 @@ footer{
         margin-top: 1.25rem;
     }
 
+    footer{
+        top: 23vh;
+    }
+
     #right {
-        flex-direction: row;
-        height: 11.25rem;
+        flex-direction: column;
+        height: 380px;
         margin: 0;
+        /* margin-bottom: 20px; */
+        /* border :2px solid black; */
     }
 
     #best {
-        flex-basis: 55vw;
+        flex-basis: 110vw;
         height: 100%;
+        margin-bottom: 30px;
     }
 
     #facebook {
-        flex-basis: 30vw;
+        margin-top: auto;
+        flex-basis: 90vw;
         height: 100%;
+        width: auto;
+        margin: auto;
     }
 }
