@@ -170,7 +170,6 @@ main {
     margin: 0 0 0 1% ;
     min-width:  32%;
     height: 100%;
-    
     position: relative;
     border-radius: 20px;
 }
@@ -253,6 +252,7 @@ main {
 }
 
 
+
 #top-rated {
     height: 20.625rem;
     border: 1px solid black;
@@ -302,6 +302,13 @@ footer{
         margin-bottom: 1.25rem;
     }
 
+    .slider-content{
+        min-width: 100%;
+        margin: 0;
+    }
+
+    
+
     #top-rated {
         margin-top: 1.25rem;
     }
@@ -332,3 +339,4 @@ footer{
         margin: auto;
     }
 }
+
