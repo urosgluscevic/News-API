@@ -300,11 +300,11 @@ footer{
 .footer_top {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .footer_links {
-    flex-wrap: wrap;
-    min-width: 20em;
+    width: 11em;
 }
 
 .footer_links h4{
@@ -338,6 +338,7 @@ footer{
 
 .footer_social {
     font-size: 3.5em;
+    text-align: center;
 }
 .footer_social i {
     margin: 1em 0.2em;
@@ -394,6 +395,9 @@ footer{
         margin: 0;
     }
 
+    .footer_bottom_inner {
+        font-size: 10px;
+    }
     
 
     #top-rated {
@@ -404,7 +408,9 @@ footer{
         margin-top: 20em;
     }
 
-    
+    .footer_social {
+        width: 100%;
+    }
 
 
     #right {
