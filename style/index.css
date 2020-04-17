@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
 
 body{
     margin: 0;
@@ -279,12 +279,99 @@ main {
 }
 
 footer{
-    width: 90%;
-    height: 8vh;
-    border: 2px solid black;
+    width: 100%;
     margin: auto;
-    position: relative;
-    background-color: chartreuse;
+    background-color: #ec4c4c;
+    padding-bottom: 2em;
+    overflow: hidden;
+}
+
+.inner_footer {
+    width: 95%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #ec4c4c;
+}
+
+.footer_branding img {
+    width: 200px;
+}
+
+.footer_top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_links {
+    flex-wrap: wrap;
+    min-width: 20em;
+}
+
+.footer_links h4{
+    color: white;
+    font-size: 20px;
+    font-family: Lato;
+}
+
+.footer_links ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.footer_links li {
+    list-style-type: none;
+    margin: 1em;
+}
+
+.footer_links a {
+    color: grey;
+    text-decoration: none;
+    font-family: Roboto;
+    transition: color 0.2s linear;
+}
+
+.footer_links a:hover {
+    color: #ffc343;
+}
+
+.footer_social {
+    font-size: 3.5em;
+}
+.footer_social i {
+    margin: 1em 0.2em;
+    transition: color 0.2s linear;
+}
+
+.footer_social i:hover {
+   color: #ffc343;
+}
+
+.footer_bottom {
+    background-color: #4d3b3b;
+    color: white;
+    font-family: roboto;
+    font-weight: lighter;
+    width: 100%;
+}
+
+.footer_bottom  a{
+    background-color: #4d3b3b;
+    color: rgb(231, 229, 229);
+    font-family: roboto;
+    font-weight: lighter;
+}
+
+.footer_bottom_inner {
+    width: 95%;
+    margin: auto;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.copy_right{
+    float: right;
 }
 
 .fb-page{
@@ -314,8 +401,11 @@ footer{
     }
 
     footer{
-        top: 23vh;
+        margin-top: 20em;
     }
+
+    
+
 
     #right {
         flex-direction: column;
