@@ -153,8 +153,6 @@ main {
 
 #slider {
     height: 40%;
-    margin-top: auto;
-    margin-bottom: auto;
     overflow: hidden;
     position: relative;
 }
