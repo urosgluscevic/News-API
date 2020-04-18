@@ -2,7 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
 
 #best{
-    /* border: 2px solid red; */
     border-bottom: 0px;
     display: flex;
     flex-direction: column;
@@ -16,17 +15,17 @@
     justify-content: space-between;
     align-items: center;
     border-bottom: 10px solid white;
-    /* padding: 10px 0; */
 
     background-color:rgba(255, 192, 17, 0.6);
 }
 
 .best-img{
     max-width: 30%;
+    transition: scale .3s;
 }
 
 .best-img:hover{
-    scale: 1.2;
+    scale: 1.1;
 }
 
 .best-heading{

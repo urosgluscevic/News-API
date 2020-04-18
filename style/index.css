@@ -8,10 +8,9 @@ body{
     overflow-x: hidden;
 }
 
-
 main {
     width: 90vw;
-    height: 37.5rem;
+    height: 43.5rem;
     margin: 100px auto;
     display: flex;
     justify-content: space-between;
@@ -28,7 +27,7 @@ main {
 }
 
 #slider {
-    height: 40%;
+    height: 15rem;
     overflow: hidden;
     position: relative;
 }
@@ -128,51 +127,8 @@ main {
 }
 
 #top-rated {
-    height: 20.625rem;
+    height: 26.625rem;
     position: relative;
-}
-
-#top-rated-grid {
-    width: 100%;
-    height: 80%;
-
-    display: grid;
-    grid-template-columns: 30% 30% 30%;
-    justify-content: space-between;
-    align-content: space-between;
-}
-
-#top-rated-item {
-    font-size: .8rem;
-    height: 8rem;
-
-    background-color:rgba(255, 192, 17, 0.6) ;
-}
-
-#top-rated-item img {
-    height: 100%;
-    float: left;
-}
-
-#top-rated-item p {
-    font-size: 1rem;
-    margin: 1,67rem 0;
-    position: relative;
-    left: 5%;
-}
-
-#top-rated-more {
-    height: 3rem;
-    width: 8rem;
-    border: none;
-    border-radius: .5rem;
-    background-color: #ec4c4c;
-    color: blanchedalmond;
-    position: absolute;
-    margin: auto;
-    left: 0;
-    right: 0;
-    bottom: 0;
 }
 
 #right {
@@ -191,10 +147,6 @@ main {
     height: 8rem;
     width: 100%;
 }
-
-/* .fb-page{
-    width: 20vw;
-} */
 
 @media (max-width: 650px) {
     main {
@@ -222,7 +174,6 @@ main {
         flex-direction: row;
         height: 380px;
         margin: 0;
-        /* border :2px solid black; */
     }
 
     #best {
