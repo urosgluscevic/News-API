@@ -145,6 +145,8 @@ main {
 #top-rated-item {
     font-size: .8rem;
     height: 8rem;
+
+    background-color:rgba(255, 192, 17, 0.6) ;
 }
 
 #top-rated-item img {
@@ -182,11 +184,6 @@ main {
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
-}
-
-#best {
-    height: 28.25rem;
-    border: 1px solid black;
 }
 
 #facebook {
@@ -242,4 +239,3 @@ main {
         margin: auto;
     }
 }
-
