@@ -22,11 +22,12 @@ main {
     flex-shrink: 5;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: stretch;
 }
 
 #slider {
+    margin-bottom: 5%;
     height: 15rem;
     overflow: hidden;
     position: relative;

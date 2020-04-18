@@ -9,7 +9,7 @@ rightB.addEventListener("click",foreward);
 
 
 function foreward(e) {
-    let moveBySize = sliderCont[5].clientWidth + (sliderCont[5].clientWidth/100) + (sliderCont[5].clientWidth/100) + (sliderCont[5].clientWidth/114);//this variable is defined every time the function is called. This way, the slider content moves for its whole length, regardless of the viewport width
+    let moveBySize = sliderCont[5].clientWidth + 10;//this variable is defined every time the function is called. This way, the slider content moves for its whole length, regardless of the viewport width; the +10 is the margin
         if(screen.width <= 650){
             moveBySize = sliderCont[5].clientWidth;
         }
@@ -23,8 +23,10 @@ function foreward(e) {
     }
 
 
-    if(sliderContentCounter > sliderCont.length-3){
-        sliderContentCounter = 0;
+    if(sliderContentCounter > sliderCont.length - 3){
+        sliderContentCounter = 0; // the slider loops to the beginning once the end is reached
+    } else if (sliderContentCounter < 0){
+        sliderContentCounter = sliderCont.length - 3 // the slider goes to the end if you try to move it farther left than the beginning
     }
     slider.style.transform= "translateX(" + (-moveBySize * sliderContentCounter) + "px)"; //moves the content
 }
