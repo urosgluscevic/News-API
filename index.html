@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style/headerAndFooter.css">
     <link rel="stylesheet" href="style/index.css">
     <link rel="stylesheet" href="style/topRated.css">
     <title>News</title>
@@ -11,6 +12,7 @@
 <body>
     <div id="fb-root"></div> <!-- do not change; needed for facebook embed-->
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v6.0"></script> <!-- do not change; needed for facebook embed-->
+    <script src="https://kit.fontawesome.com/70c71087a7.js" crossorigin="anonymous"></script> <!-- do not change; needed for icons-->
     <header>
         <img id = "logo"src="img\logo.png" alt="logo">
         <nav>
@@ -126,10 +128,51 @@
     </main>
 
     <footer>
-        
+        <div class="inner_footer">
+            <div class="footer_top">
+                <div class="footer_branding">
+                        <img src="img\logo.png" alt="logo">
+                </div>
+                <div class="footer_links">
+                    <h4>Useful links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">List</a></li>
+                        <li><a href="#">Custom</a></li>
+                    </ul>
+                </div>
+                <div class="footer_links">
+                    <h4>About us</h4>
+                    <ul>
+                        <li><a href="#">Uroš</a></li>
+                        <li><a href="#">Luka</a></li>
+                        <li><a href="#">Miodrag</a></li>
+                    </ul>
+                </div>
+                <div class="footer_links">
+                    <h4>Sources</h4>
+                    <ul>
+                        <li><a href="#">News-API</a></li>
+                        <li><a href="#">Our Github</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="footer_social">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+        </div>
     </footer>
+    <div class="footer_bottom">
+        <div class="footer_bottom_inner">
+            <span>By using our website you agree to our <a href="#">Terms of service</a><span><span class="copy_right">&copy;MUL inc.</span>
+        </div>
+    </div>
 
-    <script src="./js/home.js"></script>
+    <script src="js/home.js"></script>
     <script src="js\slider.js"></script>
+    <script src="js\header.js"></script>
 </body>
 </html>
