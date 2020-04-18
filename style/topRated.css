@@ -20,7 +20,7 @@
 .top-rated-imgContainer {
     height: 4.5rem;
     width: 100%;
-    background-color: rgba(255, 192, 17, 0.4);
+    background-color: rgb(255, 215, 103);
     position: absolute;
     bottom: 0;
     overflow: hidden;
