@@ -11,7 +11,7 @@ body{
 
 main {
     width: 90vw;
-    /* height: 20%; */
+    height: 37.5rem;
     margin: 100px auto;
     display: flex;
     justify-content: space-between;
@@ -125,17 +125,57 @@ main {
     padding: 0;
 }
 
-
-
 #top-rated {
     height: 20.625rem;
-    border: 1px solid black;
+    position: relative;
+}
+
+#top-rated-grid {
+    width: 100%;
+    height: 80%;
+
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+#top-rated-item {
+    font-size: .8rem;
+    height: 8rem;
+}
+
+#top-rated-item img {
+    height: 100%;
+    float: left;
+}
+
+#top-rated-item p {
+    font-size: 1rem;
+    margin: 1,67rem 0;
+    position: relative;
+    left: 5%;
+}
+
+#top-rated-more {
+    height: 3rem;
+    width: 8rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: #ec4c4c;
+    color: blanchedalmond;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 #right {
     flex-basis: 20vw;
     min-width: 170px;
     margin-left: 20px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -143,20 +183,19 @@ main {
 }
 
 #best {
-    height: 23.75rem;
+    height: 28.25rem;
     border: 1px solid black;
 }
 
 #facebook {
     overflow: hidden;
-    height: 12.5rem;
+    height: 8rem;
+    width: 100%;
 }
 
-
-
-.fb-page{
+/* .fb-page{
     width: 20vw;
-}
+} */
 
 @media (max-width: 650px) {
     main {
@@ -181,10 +220,9 @@ main {
     }
 
     #right {
-        flex-direction: column;
+        flex-direction: row;
         height: 380px;
         margin: 0;
-        /* margin-bottom: 20px; */
         /* border :2px solid black; */
     }
 

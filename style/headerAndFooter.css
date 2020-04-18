@@ -75,7 +75,6 @@ nav {
 
 #dropdown-content{ /*dropdown list, which appears only when ABOUT (id="hover-to-dropdown") is hovered*/
     display: none;
-    
 }
 
 #hover-to-dropdown:hover #dropdown-content{ /*the hidden dropdown list appears*/
@@ -101,8 +100,6 @@ nav {
 }
 
 .dropdown-link:nth-child(3){
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
     box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
