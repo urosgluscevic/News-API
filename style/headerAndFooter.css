@@ -1,0 +1,236 @@
+header{
+    top: 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 4.5rem;
+    margin: auto;
+    background-color: #ec4c4c;
+    z-index: 2;
+    
+}
+
+#logo{
+    max-height: 4.5rem;
+}
+
+nav {
+    width: 80%;
+    height: 4.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.header-link{
+    text-decoration: none;
+    color: black;
+    height: 4.5rem;
+    width: 25%;
+    line-height: 4.5rem;
+    text-align: center;
+}
+
+.header-link:hover{  /*links in the nav-bar change their colour when hovered*/
+    background-color: #b63838;
+    color: blanchedalmond;
+}
+
+.header-link{  /*when hovered, nav links get a border which appears slowly*/
+    transition: border-bottom 0.2s linear;
+    transition: height 0.2s linear;
+}
+
+.header-link:hover{
+    border-bottom: #ffc343 4px solid;
+    height: 4.25rem;
+}
+
+#hover-to-dropdown{
+    height: 4.5rem;
+    width: 25%;
+    line-height: 4.5rem;
+    text-align: center;
+}
+
+.link-to-dropdown{
+    text-decoration: none;
+    color: black;
+    height: 100%;
+    width: 25%;
+    line-height: 4.5rem;
+    text-align: center;
+}
+
+#hover-to-dropdown:hover{
+    background-color: #b63838;
+    color: blanchedalmond;
+    border-bottom: #ffc343 4px solid;
+    
+}
+
+#dropdown-content{ /*dropdown list, which appears only when ABOUT (id="hover-to-dropdown") is hovered*/
+    display: none;
+}
+
+#hover-to-dropdown:hover #dropdown-content{ /*the hidden dropdown list appears*/
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown-link{
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    background-color: #b63838;
+    border-top: 1px solid black;
+
+    opacity: 0.1;
+    
+    animation-name: animate; 
+    animation-duration: 1s;
+    animation-fill-mode: forwards; /*animation does not reset after it is done*/
+}
+
+.dropdown-link:nth-child(3){
+    box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+
+
+
+@keyframes animate{  /*gradually increase the opacity of the dropdown list once it is shown*/
+    0%{
+        opacity: 0.1;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.dropdown-link:hover{
+    color: blanchedalmond;
+}
+
+
+
+
+footer{
+    width: 100%;
+    margin: auto;
+    background-color: #ec4c4c;
+    padding-bottom: 2em;
+    overflow: hidden;
+}
+
+.inner_footer {
+    width: 95%;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #ec4c4c;
+}
+
+.footer_branding img {
+    width: 200px;
+}
+
+.footer_top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer_links {
+    width: 11em;
+}
+
+.footer_links h4{
+    color: white;
+    font-size: 20px;
+    font-family: Lato;
+}
+
+.footer_links ul {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+.footer_links li {
+    list-style-type: none;
+    margin: 1em;
+}
+
+.footer_links a {
+    color: grey;
+    text-decoration: none;
+    font-family: Roboto;
+    transition: color 0.2s linear;
+}
+
+.footer_links a:hover {
+    color: #ffc343;
+}
+
+.footer_social {
+    font-size: 3.5em;
+    text-align: center;
+}
+.footer_social i {
+    margin: 1em 0.2em;
+    transition: color 0.2s linear;
+}
+
+.footer_social i:hover {
+   color: #ffc343;
+}
+
+.footer_bottom {
+    background-color: #4d3b3b;
+    color: white;
+    font-family: roboto;
+    font-weight: lighter;
+    width: 100%;
+}
+
+.footer_bottom  a{
+    background-color: #4d3b3b;
+    color: rgb(231, 229, 229);
+    font-family: roboto;
+    font-weight: lighter;
+}
+
+.footer_bottom_inner {
+    width: 95%;
+    margin: auto;
+    padding: 0.5em;
+    text-align: center;
+}
+
+.copy_right{
+    float: right;
+}
+
+@media (max-width: 650px) {
+
+    footer{
+        margin-top: 20em;
+    }
+
+    .footer_social {
+        width: 100%;
+    }
+
+    .footer_bottom_inner {
+        font-size: 10px;
+    }
+}

@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
 
 body{
     margin: 0;
@@ -8,122 +8,10 @@ body{
     overflow-x: hidden;
 }
 
-header{
-    top: 0;
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    height: 4.5rem;
-    margin: auto;
-    background-color: #ec4c4c;
-    z-index: 2;
-}
-
-#logo{
-    max-height: 4.5rem;
-}
-
-nav {
-    width: 80%;
-    height: 4.5rem;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.header-link{
-    text-decoration: none;
-    color: black;
-    height: 4.5rem;
-    width: 25%;
-    line-height: 4.5rem;
-    text-align: center;
-}
-
-.header-link:hover{  /*links in the nav-bar change their colour when hovered*/
-    background-color: #b63838;
-    color: blanchedalmond;
-}
-
-.header-link{  /*when hovered, nav links get a border which appears slowly*/
-    transition: border-bottom 0.2s linear;
-    transition: height 0.2s linear;
-}
-
-.header-link:hover{
-    border-bottom: #ffc343 4px solid;
-    height: 4.25rem;
-}
-
-#hover-to-dropdown{
-    height: 4.5rem;
-    width: 25%;
-    line-height: 4.5rem;
-    text-align: center;
-}
-
-.link-to-dropdown{
-    text-decoration: none;
-    color: black;
-    height: 100%;
-    width: 25%;
-    line-height: 4.5rem;
-    text-align: center;
-}
-
-#hover-to-dropdown:hover{
-    background-color: #b63838;
-    color: blanchedalmond;
-    border-bottom: #ffc343 4px solid;
-}
-
-#dropdown-content{ /*dropdown list, which appears only when ABOUT (id="hover-to-dropdown") is hovered*/
-    display: none;
-}
-
-#hover-to-dropdown:hover #dropdown-content{ /*the hidden dropdown list appears*/
-    display: flex;
-    flex-direction: column;
-}
-
-.dropdown-link{
-    width: 100%;
-    height: 3rem;
-    line-height: 3rem;
-    text-decoration: none;
-    color: black;
-    font-size: 1.2rem;
-    background-color: #b63838;
-    border-top: 1px solid black;
-
-    opacity: 0.1;
-
-    animation-name: animate; 
-    animation-duration: 1s;
-    animation-fill-mode: forwards; /*animation does not reset after it is done*/
-}
-
-@keyframes animate{  /*gradually increase the opacity of the dropdown list once it is shown*/
-    0%{
-        opacity: 0.1;
-    }
-
-    100%{
-        opacity: 1;
-    }
-}
-
-.dropdown-link:hover{
-    color: blanchedalmond;
-}
 
 main {
     width: 90vw;
-    /* height: 20%; */
+    height: 37.5rem;
     margin: 100px auto;
     display: flex;
     justify-content: space-between;
@@ -141,8 +29,6 @@ main {
 
 #slider {
     height: 40%;
-    margin-top: auto;
-    margin-bottom: auto;
     overflow: hidden;
     position: relative;
 }
@@ -160,7 +46,6 @@ main {
     margin-right: 5px;
     min-width:  32%;
     height: 100%;
-    
     position: relative;
     border-radius: 20px;
 }
@@ -242,16 +127,57 @@ main {
     padding: 0;
 }
 
-
 #top-rated {
     height: 20.625rem;
-    border: 1px solid black;
+    position: relative;
+}
+
+#top-rated-grid {
+    width: 100%;
+    height: 80%;
+
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+#top-rated-item {
+    font-size: .8rem;
+    height: 8rem;
+}
+
+#top-rated-item img {
+    height: 100%;
+    float: left;
+}
+
+#top-rated-item p {
+    font-size: 1rem;
+    margin: 1,67rem 0;
+    position: relative;
+    left: 5%;
+}
+
+#top-rated-more {
+    height: 3rem;
+    width: 8rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: #ec4c4c;
+    color: blanchedalmond;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 #right {
     flex-basis: 20vw;
     min-width: 170px;
     margin-left: 20px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -259,27 +185,19 @@ main {
 }
 
 #best {
-    height: 23.75rem;
+    height: 28.25rem;
     border: 1px solid black;
 }
 
 #facebook {
     overflow: hidden;
-    height: 12.5rem;
+    height: 8rem;
+    width: 100%;
 }
 
-footer{
-    width: 90%;
-    height: 8vh;
-    border: 2px solid black;
-    margin: auto;
-    position: relative;
-    background-color: chartreuse;
-}
-
-.fb-page{
+/* .fb-page{
     width: 20vw;
-}
+} */
 
 @media (max-width: 650px) {
     main {
@@ -291,20 +209,22 @@ footer{
         height: 38.75rem;
         margin-bottom: 1.25rem;
     }
+    
+   
+    .slider-content{
+        min-width: 100%;
+        margin: 0;
+    }
+
 
     #top-rated {
         margin-top: 1.25rem;
     }
 
-    footer{
-        top: 23vh;
-    }
-
     #right {
-        flex-direction: column;
+        flex-direction: row;
         height: 380px;
         margin: 0;
-        /* margin-bottom: 20px; */
         /* border :2px solid black; */
     }
 
@@ -322,3 +242,4 @@ footer{
         margin: auto;
     }
 }
+
