@@ -23,8 +23,10 @@ function foreward(e) {
     }
 
 
-    if(sliderContentCounter > sliderCont.length-3){
-        sliderContentCounter = 0;
+    if(sliderContentCounter > sliderCont.length - 3){
+        sliderContentCounter = 0; // the slider loops to the beginning once the end is reached
+    } else if (sliderContentCounter < 0){
+        sliderContentCounter = sliderCont.length - 3 // the slider goes to the end if you try to move it farther left than the beginning
     }
     slider.style.transform= "translateX(" + (-moveBySize * sliderContentCounter) + "px)"; //moves the content
 }
