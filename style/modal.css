@@ -91,3 +91,8 @@
     color: #ffc343;
 }
 
+@media (max-width: 650px){
+    .modal h3{
+        font-size: 25px;
+    }
+}

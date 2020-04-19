@@ -19,6 +19,10 @@
     background-color:rgba(255, 192, 17, 0.6);
 }
 
+.best-content:hover{
+    cursor: pointer;
+}
+
 .best-imgDiv {
     float: left;
     width: 30%;
@@ -29,7 +33,7 @@
 }
 
 .best-img{
-    width: 100%;
+    height: 100%;
     transition: scale .3s;
     position: absolute;
     margin: auto;
@@ -38,13 +42,13 @@
 }
 
 .best-img:hover{
-    scale: 1.1;
+    scale: 1.4;
 }
 
 .best-heading{
     margin-left: 5%;
     width: 70%;
-    font-size: 1rem;
+    font-size: 0.9rem;
 
     font-family: lato;
 }

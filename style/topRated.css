@@ -17,6 +17,10 @@
     position: relative;
 }
 
+.top-rated-item:hover{
+    cursor: pointer;
+}
+
 .top-rated-imgContainer {
     height: 4.5rem;
     width: 100%;
@@ -55,7 +59,7 @@
     margin: auto;
     left: 0;
     right: 0;
-    margin-top: 10%;
+    margin-top: 10px;
     bottom: 0;
 }
 

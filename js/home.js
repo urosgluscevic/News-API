@@ -91,6 +91,9 @@ function loadMoreHandler(){
         correctWidth()
 
         buttonPressed++;
+    } else {
+        button.innerText = "All Articles Loaded"
+        button.style.backgroundColor = "gray"
     }
 }
 
