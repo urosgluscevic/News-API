@@ -11,6 +11,10 @@
     animation: modalanim 1s linear;
 }
 
+.modal a {
+    text-decoration: none;
+}
+
 
 @keyframes modalanim {
     0%{
@@ -32,6 +36,11 @@
     color: #ec4c4c;
     text-align: center;
     font-size: 40px;
+    transition: color 0.2s linear;
+}
+
+.modal h3:hover {
+    color: #ffc343;
 }
 
 

@@ -36,6 +36,7 @@ function modalPopUp() {
             $(".modal-author").innerText = article[i].author;
             $(".modal-date").innerText = article[i].publishedAt;
             $(".modal-text").innerHTML = article[i].content;
+            $(".modal-link").href = article[i].url;
         }
         
         
