@@ -9,8 +9,8 @@ header{
     height: 4.5rem;
     margin: auto;
     background-color: #ec4c4c;
-    z-index: 2;
-    
+    z-index: 2;    
+    font-family: Roboto;
 }
 
 #logo{
@@ -28,21 +28,18 @@ nav {
 
 .header-link{
     text-decoration: none;
-    color: black;
+    color: white;
     height: 4.5rem;
     width: 25%;
     line-height: 4.5rem;
     text-align: center;
+    transition: border-bottom 0.2s linear;
+    transition: height 0.2s linear;
 }
 
 .header-link:hover{  /*links in the nav-bar change their colour when hovered*/
     background-color: #b63838;
-    color: blanchedalmond;
-}
-
-.header-link{  /*when hovered, nav links get a border which appears slowly*/
-    transition: border-bottom 0.2s linear;
-    transition: height 0.2s linear;
+    color: #ffc343;
 }
 
 .header-link:hover{
@@ -55,11 +52,12 @@ nav {
     width: 25%;
     line-height: 4.5rem;
     text-align: center;
+    color: white;
 }
 
 .link-to-dropdown{
     text-decoration: none;
-    color: black;
+    color: white;
     height: 100%;
     width: 25%;
     line-height: 4.5rem;
@@ -67,14 +65,14 @@ nav {
 }
 
 #hover-to-dropdown:hover{
-    background-color: #b63838;
-    color: blanchedalmond;
-    border-bottom: #ffc343 4px solid;
-    
+    color: #ffff33;
+    background-color: #ec4c4c;
 }
 
 #dropdown-content{ /*dropdown list, which appears only when ABOUT (id="hover-to-dropdown") is hovered*/
     display: none;
+    
+    
 }
 
 #hover-to-dropdown:hover #dropdown-content{ /*the hidden dropdown list appears*/
@@ -82,18 +80,22 @@ nav {
     flex-direction: column;
 }
 
+.header-selected {
+    border-bottom: #ffc343 4px solid;
+    height: 4.25rem;
+}
+
+
 .dropdown-link{
     width: 100%;
     height: 3rem;
     line-height: 3rem;
     text-decoration: none;
-    color: black;
+    color: white;
     font-size: 1.2rem;
-    background-color: #b63838;
-    border-top: 1px solid black;
-
+    background-color: #ec4c4c;
+    border-top: 1px solid #ffc343;
     opacity: 0.1;
-    
     animation-name: animate; 
     animation-duration: 1s;
     animation-fill-mode: forwards; /*animation does not reset after it is done*/
@@ -102,8 +104,6 @@ nav {
 .dropdown-link:nth-child(3){
     box-shadow: 4px 10px 5px 0px rgba(0,0,0,0.75);
 }
-
-
 
 
 @keyframes animate{  /*gradually increase the opacity of the dropdown list once it is shown*/
@@ -117,7 +117,7 @@ nav {
 }
 
 .dropdown-link:hover{
-    color: blanchedalmond;
+    color: #ffc343;
 }
 
 
