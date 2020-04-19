@@ -151,11 +151,12 @@ main {
 @media (max-width: 650px) {
     main {
         flex-direction: column;
-        height: 48.125rem;
+        /* height: 48.125rem; */
+        height: 85rem;
     }
 
     #left {
-        height: 38.75rem;
+        /* height: 38.75rem; */
         margin-bottom: 1.25rem;
     }
     
@@ -165,9 +166,9 @@ main {
         margin: 0;
     }
 
-
     #top-rated {
         margin-top: 1.25rem;
+        height: 38.125rem;
     }
 
     #right {
@@ -177,16 +178,15 @@ main {
     }
 
     #best {
-        flex-basis: 110vw;
+        flex-basis: 55vw;
         height: 100%;
         margin-bottom: 30px;
     }
 
     #facebook {
         margin-top: auto;
-        flex-basis: 90vw;
+        flex-basis: 30vw;
         height: 100%;
         width: auto;
-        margin: auto;
     }
 }

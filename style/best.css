@@ -2,26 +2,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
 
 #best{
-    border-bottom: 0px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    border: 1px solid black;
+    height: 20rem;
 }
 
 .best-content{
     width: 100%;
+    height: 30%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 10px solid white;
 
     background-color:rgba(255, 192, 17, 0.6);
 }
 
+.best-imgDiv {
+    float: left;
+    width: 30%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(255, 230, 160);
+}
+
 .best-img{
-    max-width: 30%;
+    width: 100%;
     transition: scale .3s;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
 }
 
 .best-img:hover{
