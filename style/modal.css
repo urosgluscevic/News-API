@@ -1,0 +1,93 @@
+.modal {
+    display: none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 69;
+    top: 0;   
+    font-family: Roboto;
+    font-weight: lighter;
+    animation: modalanim 1s linear;
+}
+
+.modal a {
+    text-decoration: none;
+}
+
+
+@keyframes modalanim {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.modal img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.modal h3 {
+    color: #ec4c4c;
+    text-align: center;
+    font-size: 40px;
+    transition: color 0.2s linear;
+}
+
+.modal h3:hover {
+    color: #ffc343;
+}
+
+
+.modal-window {
+    width: 90vw;
+    height: 90vh;
+    background-color: white;
+    margin: auto;
+    margin-top: 5vh;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    display: flex;
+    background-color: rgb(204, 204, 204);
+    position: relative;
+}
+
+.modal-left {
+    width: 40%;
+    height: 100%;
+}
+
+.modal-right{
+    height: 90%;
+    width: 50%;
+    margin: auto;
+}
+
+.modal-info {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1em;
+    border-bottom: #ffc343 2px solid;
+}
+
+.modal i {
+    margin-right: 0.5em;
+}
+
+#modalCloseButton {
+    position: absolute;
+    top: 2%;
+    right: 0%;
+    font-size: 40px;
+    color: #ec4c4c;
+    transition: color 0.2s linear;
+}
+
+#modalCloseButton:hover {
+    color: #ffc343;
+}
+

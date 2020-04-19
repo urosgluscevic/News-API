@@ -104,13 +104,15 @@ async function fillNews(item, index) {
             "X-Api-Key": "d6e9eca6a9e4407cb8c19ed7dd38b910"
         }
     })
-    let data = await response.json()
-    console.log(data)
+    data = await response.json()
+    // console.log(data.articles.length)
     item.children[0].textContent = data.articles[index].title
     item.children[1].textContent = data.articles[index].description
     item.children[2].firstElementChild.src = data.articles[index].urlToImage
 }
 
-let topRated = document.getElementsByClassName("top-rated-item")
-for (let i = 0; i < topRated.length; i++)
+let topRated = document.querySelectorAll(".top-rated-item")
+for (let i = 0; i < topRated.length; i++){
     fillNews(topRated[i], i)
+    alreadyUsed++; //since the first i articles have been used, they will be ignored from now on
+}
