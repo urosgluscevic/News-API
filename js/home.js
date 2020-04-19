@@ -47,6 +47,8 @@ function loadMoreHandler(){
             newBlock.children[1].textContent = data.articles[alreadyUsed].description;
             newBlock.children[2].firstElementChild.src = data.articles[alreadyUsed].urlToImage;
 
+            newBlock.addEventListener("click",modalPopUp);
+            
             newsContainerGrid.appendChild(newBlock)
 
             alreadyUsed++;
