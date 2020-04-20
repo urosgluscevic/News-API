@@ -33,6 +33,11 @@ main {
     position: relative;
 }
 
+.sliderTitle{
+    font-size: 0.4rem;
+    color: black;
+}
+
 .Hot-News {
     
     display: flex;
@@ -61,7 +66,7 @@ main {
     border-radius: 20px;
 }
 
-.slider-content h3 {
+.slider-content h5 {
     position: absolute;
     top: 30%;
     left: 50%;
@@ -71,7 +76,7 @@ main {
     width: 100%;
     font-family: lato;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 15px;
     text-align: center;
 }
 

@@ -68,10 +68,60 @@ function modalPopUp() {
             $(".modal-date").innerText = article[i].publishedAt;
             $(".modal-text").innerHTML = article[i].content;
             $(".modal-link").href = article[i].url;
-        }
-        
-        
+        }   
     }
+}
 
-    
+var sliderContentCards = document.getElementsByClassName("slider-content");
+var sliderContentCardsArray = Array.from(sliderContentCards)
+
+sliderContentCardsArray[0].children[2].addEventListener("click", function(){
+    sliderModal(0)
+})
+
+sliderContentCardsArray[1].children[2].addEventListener("click", function(){
+    sliderModal(1)
+})
+
+sliderContentCardsArray[2].children[2].addEventListener("click", function(){
+    sliderModal(2)
+})
+
+sliderContentCardsArray[3].children[2].addEventListener("click", function(){
+    sliderModal(3)
+})
+
+sliderContentCardsArray[4].children[2].addEventListener("click", function(){
+    sliderModal(4)
+})
+
+sliderContentCardsArray[5].children[2].addEventListener("click", function(){
+    sliderModal(5)
+})
+
+sliderContentCardsArray[6].children[2].addEventListener("click", function(){
+    sliderModal(6)
+})
+
+sliderContentCardsArray[7].children[2].addEventListener("click", function(){
+    sliderModal(7)
+})
+
+sliderContentCardsArray[8].children[2].addEventListener("click", function(){
+    sliderModal(8)
+})
+
+sliderContentCardsArray[9].children[2].addEventListener("click", function(){
+    sliderModal(9)
+})
+console.log(sliderContentCardsArray[0].children[2])
+function sliderModal(sliderElemetIndex){
+    modal.style.display = "block"
+    let article = sliderArticles.articles;
+    $(".modal-img").src = article[sliderElemetIndex].urlToImage;
+    $(".modal-title").innerText = article[sliderElemetIndex].title;
+    $(".modal-author").innerText = article[sliderElemetIndex].author;
+    $(".modal-date").innerText = article[sliderElemetIndex].publishedAt;
+    $(".modal-text").innerHTML = article[sliderElemetIndex].content;
+    $(".modal-link").href = article[sliderElemetIndex].url;
 }
