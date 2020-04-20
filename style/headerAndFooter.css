@@ -223,7 +223,7 @@ footer{
 @media (max-width: 650px) {
 
     footer{
-        margin-top: 20em;
+        margin-top: 2em;
     }
 
     .footer_social {
@@ -232,5 +232,14 @@ footer{
 
     .footer_bottom_inner {
         font-size: 10px;
+    }
+
+    #logo{
+        display: none;
+    }
+
+    nav{
+        width: 100%;
+        justify-content: space-between;
     }
 }

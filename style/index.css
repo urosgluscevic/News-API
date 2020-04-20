@@ -178,8 +178,7 @@ main {
     }
 
     #right {
-        flex-direction: row;
-        height: 380px;
+        height: 500px;
         margin: 0;
     }
 
@@ -190,9 +189,10 @@ main {
     }
 
     #facebook {
-        margin-top: auto;
+        margin-bottom: 20px;
         flex-basis: 30vw;
-        height: 100%;
-        width: auto;
+        /* height: auto; */
+        width: 80%;
+        margin: auto;
     }
 }
