@@ -102,7 +102,7 @@ var alreadyUsed = 0; //is used in order for new articles to be loaded, and for i
 // EVERYTHING ABOVE THIS LINE IS USED FOR THE FUNCTIONALITY OF THE "LOAD MORE" BUTTON
 
 async function fillNews(item, index) {
-    const response = await fetch("https://newsapi.org/v2/top-headlines?country=rs", {
+    const response = await fetch("https://newsapi.org/v2/top-headlines?language=en", {
         headers: {
             "X-Api-Key": "d6e9eca6a9e4407cb8c19ed7dd38b910"
         }
