@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="..\style\headerAndFooter.css">
+    <link rel="stylesheet" href="..\style\modal.css">
+    <link rel="stylesheet" href="..\style\saved.css">
+    <title>News</title>
+</head>
+<body>
+    <script src="https://kit.fontawesome.com/70c71087a7.js" crossorigin="anonymous"></script> <!-- do not change; needed for icons-->
+    <header>
+        <img id = "logo"src="..\img\logo.png" alt="logo">
+        <nav>
+            <a class="header-link" href="..\index.html">HOME</a>
+            <a class="header-link"href="">LIST</a>
+            <a class="header-link header-selected"href="">CUSTOM</a>
+            <div id="hover-to-dropdown">
+                <a class="link-to-dropdown"href="">ABOUT</a>
+                <div id="dropdown-content">
+                    <a class="dropdown-link"href="">Miodrag</a> 
+                    <a class="dropdown-link"href="">Luka</a> 
+                    <a class="dropdown-link"href="">Uroš</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Saved articles</h2>
+        <h4>all your saved articles are here</h4>
+        <section class="allSavedArticles">
+            
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <footer>
+            <div class="inner_footer">
+                <div class="footer_top">
+                    <div class="footer_branding">
+                            <img src="..\img\logo.png" alt="logo">
+                    </div>
+                    <div class="footer_links">
+                        <h4>Useful links</h4>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">List</a></li>
+                            <li><a href="#">Custom</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_links">
+                        <h4>About us</h4>
+                        <ul>
+                            <li><a href="#">Uroš</a></li>
+                            <li><a href="#">Luka</a></li>
+                            <li><a href="#">Miodrag</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_links">
+                        <h4>Sources</h4>
+                        <ul>
+                            <li><a href="#">News-API</a></li>
+                            <li><a href="#">Our Github</a></li>
+                            <li><a href="#">Contact us</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer_social">
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-twitter"></i>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <div class="footer_bottom">
+            <div class="footer_bottom_inner">
+                <span>By using our website you agree to our <a href="#">Terms of service</a><span><span class="copy_right">&copy;MUL inc.</span>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="modal">
+            <div class="modal-window"> 
+                    <div class="modal-left">
+                        <img src="https://publisher-publish.s3.eu-central-1.amazonaws.com/pb-vijesti/swp/9sju0v/media/20200418220420_bedcef22-9213-4793-ac6e-1fb26f49e175.jpeg" class="modal-img" alt="current topic">
+                    </div>
+                    <div class="modal-right">
+                       <a href="#" class="modal-link" target="blanc"><h3 class="modal-title">Alo mali kako si pitam se</h3></a> 
+                        <div class="modal-info">
+                                <div><i class="fas fa-user"></i><span class="modal-author">Autor</span></div>
+                                <div> <i class="fas fa-clock"></i><span class="modal-date">3.11.6969</span></div>
+                        </div>
+                        <div class="modal-article">
+                            <p class="modal-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                        </div>
+                    </div>
+                    <i class="fas fa-window-close" id="modalCloseButton"></i>
+                    <i class="far fa-save modal-save" id="modal-save"></i>
+                    <p id="articleSaveP">Article Saved</p>
+            </div>
+        </div>
+    
+
+
+<script src="..\js\saved.js"></script>
+</body>
+</html>
