@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+}
+
+main {
+    margin: 7rem auto 0;
+    width: 80vw;
+}
+
+#search-div {
+    background-color: #ec4c4c;
+    color: blanchedalmond;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+}
+
+#search {
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+#search-input {
+    height: 92%;
+    flex-basis: 90%;
+    border: none;
+    padding-left: .5rem;
+}
+
+#search-submit {
+    height: 100%;
+    flex-basis: 10%;
+    margin-left: .5rem;
+    border: none;
+}
+
+#filters-div {
+    border-radius: 1rem;
+    background-color: #808080;
+    height: 2rem;
+    padding: 0 1rem;
+    transition: height .5s;
+    overflow: hidden;
+}
+
+#filters-filters {
+    margin: 0;
+    line-height: 2rem;
+    transition: opacity .5s;
+}
+
+#filters-actual {
+    opacity: 0%;
+    position: relative;
+    bottom: 0;
+    transition: all .5s;
+}
+
+#filters-div:hover {
+    height: 6rem;
+}
+
+#filters-div:hover #filters-filters {
+    opacity: 0%;
+}
+
+#filters-div:hover #filters-actual {
+    opacity: 100%;
+    bottom: 2rem;
+}
+
+#display-content {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    row-gap: 2rem;
+    column-gap: 2%;
+}
+
+.article-div {
+    border: 1px solid black;
+    height: 15rem;
+    overflow: hidden;
+}
+
+.article-imgDiv {
+    height: 100%;
+    width: 30%;
+    float: left;
+    background-color: 1px solid black;
+    overflow: hidden;
+}
