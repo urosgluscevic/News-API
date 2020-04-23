@@ -11,6 +11,12 @@
     animation: modalanim 1s linear;
 }
 
+.modal-text {
+    margin: 1em;
+}
+
+
+
 .modal a {
     text-decoration: none;
 }
@@ -37,6 +43,7 @@
     text-align: center;
     font-size: 40px;
     transition: color 0.2s linear;
+    margin: 1em;
 }
 
 .modal h3:hover {

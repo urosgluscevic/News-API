@@ -11,9 +11,11 @@ function createSavedArticle(i){
     saveDiv.appendChild(saveImg);
     saveDiv.appendChild(saveHr);
     saveDiv.appendChild(saveH3);
+    saveDiv.addEventListener("click",modalPopUp);
     return saveDiv;
 }
 
 for(let i = 0;i<localStorage.length;i++){
     document.querySelector(".allSavedArticles").appendChild(createSavedArticle(i));
 }
+
