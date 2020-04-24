@@ -49,6 +49,9 @@ searchSubmit.addEventListener("click", () => {
     let sortBy = filterSortBy.value
     if (sortBy === "time published")
         sortBy = "publishedAt"
+
+    for (article of displayContent.children)
+        displayContent.removeChild(article)
     
     searchNews(searchInput.value, sortBy, filterDateFrom.value, filterDateTo.value)
 })

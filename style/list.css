@@ -9,7 +9,7 @@ main {
 
 #search-div {
     background-color: #ec4c4c;
-    color: blanchedalmond;
+    color: white;
     padding: 2rem;
     margin-bottom: 2rem;
     border-radius: 2rem;
@@ -55,13 +55,28 @@ main {
 
 #filters-actual {
     opacity: 0%;
+    line-height: 2rem;
     position: relative;
     bottom: 0;
     transition: all .5s;
+    font-size: 1rem;
+}
+
+#filter-dateFrom, #filter-dateTo {
+    height: 1.5rem;
+    border: none;
+    border-radius: .75rem;
+    padding-left: .5rem;
+}
+
+#filter-sortBy {
+    height: 1.5rem;
+    border: none;
+    border-radius: .75rem;
 }
 
 #filters-div:hover {
-    height: 6rem;
+    height: 7rem;
 }
 
 #filters-div:hover #filters-filters {
@@ -76,20 +91,54 @@ main {
 #display-content {
     display: grid;
     grid-template-columns: 49% 49%;
-    row-gap: 2rem;
+    row-gap: 1rem;
     column-gap: 2%;
+    margin-bottom: 3rem;
 }
 
 .article-div {
-    border: 1px solid black;
-    height: 15rem;
+    height: 13rem;
     overflow: hidden;
+    background-color: rgb(255,230,160);
+    border-radius: 2rem;
 }
 
 .article-imgDiv {
     height: 100%;
     width: 30%;
     float: left;
-    background-color: 1px solid black;
-    overflow: hidden;
+    background-color: red;
+    position: relative;
+    background-color: rgb(255,215,103);
+}
+
+.article-img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.article-title {
+    margin-left: 35%;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.article-description {
+    margin-left: 35%;
+    font-size: .8rem;
+}
+
+@media (max-width: 650px) {
+    main {
+        width: 90vw;
+    }
+    #display-content {
+        grid-template-columns: 100%;
+    }
 }
