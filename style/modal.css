@@ -11,6 +11,12 @@
     animation: modalanim 1s linear;
 }
 
+.modal-text {
+    margin: 1em;
+}
+
+
+
 .modal a {
     text-decoration: none;
 }
@@ -37,6 +43,7 @@
     text-align: center;
     font-size: 40px;
     transition: color 0.2s linear;
+    margin: 1em;
 }
 
 .modal h3:hover {
@@ -87,9 +94,101 @@
     transition: color 0.2s linear;
 }
 
-#modalCloseButton:hover {
+.modalCloseButton:hover {
     color: #ffc343;
 }
+
+.modal-save{
+    position: absolute;
+    font-size: 60px;
+    bottom: 2%;
+    right: 0%;
+    color: #8d2929;
+    transition: color 0.2s linear;
+}
+
+.modal-save:not(.modal-saved):hover{
+    color: #ffc343;
+    animation: saveAnim infinite 0.4s;
+}
+
+
+
+@keyframes saveAnim {
+    0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}
+
+#modal-save:active{
+    color: green;
+    animation: none;
+}
+
+.modal-saved{
+    color: green;
+}
+
+.modal-saved:hover {
+    color: red;
+    animation: unsaveAnim 0.4s infinite;
+}
+
+@keyframes unsaveAnim {
+    10%, 90% {
+        transform: translate3d(-1px, 0, 0);
+      }
+      
+      20%, 80% {
+        transform: translate3d(2px, 0, 0);
+      }
+    
+      30%, 50%, 70% {
+        transform: translate3d(-4px, 0, 0);
+      }
+    
+      40%, 60% {
+        transform: translate3d(4px, 0, 0);
+      }
+}
+
+#articleSaveP{
+    display: none;
+    padding: 0.8em;
+    background-color: black;
+    color: white;
+    position: absolute;
+    bottom: 0%;
+    right: 30%;
+    border-radius: 20px;
+    animation: saveP 4s forwards;
+}
+
+@keyframes saveP{
+0%{
+    opacity: 0;
+}
+
+50%{
+    opacity: 1;
+}
+100% {
+    opacity: 0;
+}
+
+}
+
 
 @media (max-width: 900px){
     .modal-window{

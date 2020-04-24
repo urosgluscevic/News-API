@@ -5,7 +5,43 @@ function $(string){
 function $$(string){
     return document.querySelectorAll(string);
 }
+let maximalLocalCounter = 0;
+let localCounter = 0;
+if(localStorage.length === 1) {
+    localCounter = parseInt(localStorage.key(localStorage.length-1),10)+1;
+}
 
+let maxLocalCounter = 0;
+
+for(let i = 1;i<localStorage.length;i++){
+    if(parseInt(localStorage.key(i),10)>maximalLocalCounter){
+        maximalLocalCounter = parseInt(localStorage.key(i),10);
+    }
+    localCounter = maximalLocalCounter+1;
+}
+
+
+let titleCheck = [];
+
+for(let i = 0;i<localStorage.length;i++){
+    titleCheck.push(localStorage.getItem(localStorage.key(i)).split("♩")[1]);
+}
+
+function titleChecker() {
+    for(let i = 0; i<titleCheck.length;i++){
+    if($(".modal-title").innerText == titleCheck[i]){
+        saveButton.classList.add("modal-saved");
+        break;
+    }  
+    else{
+        saveButton.classList.remove("modal-saved");
+    }
+}
+}
+
+
+let saveButton = $("#modal-save");
+saveButton.addEventListener("click", saveArticle);
 
 
 modal = document.querySelector(".modal");
@@ -52,6 +88,7 @@ function fillModalWindowBest(i){
     $(".modal-date").innerText = article[i].publishedAt;
     $(".modal-text").innerHTML = article[i].content;
     $(".modal-link").href = article[i].url;
+    titleChecker();
 }
 
 function modalPopUp() {
@@ -70,49 +107,50 @@ function modalPopUp() {
             $(".modal-link").href = article[i].url;
         }   
     }
+    titleChecker();
 }
 
 var sliderContentCards = document.getElementsByClassName("slider-content");
 var sliderContentCardsArray = Array.from(sliderContentCards)
 
 sliderContentCardsArray[0].children[2].addEventListener("click", function(){
-    sliderModal(0)
+    sliderModal(0);
 })
 
 sliderContentCardsArray[1].children[2].addEventListener("click", function(){
-    sliderModal(1)
+    sliderModal(1);
 })
 
 sliderContentCardsArray[2].children[2].addEventListener("click", function(){
-    sliderModal(2)
+    sliderModal(2);
 })
 
 sliderContentCardsArray[3].children[2].addEventListener("click", function(){
-    sliderModal(3)
+    sliderModal(3);
 })
 
 sliderContentCardsArray[4].children[2].addEventListener("click", function(){
-    sliderModal(4)
+    sliderModal(4);
 })
 
 sliderContentCardsArray[5].children[2].addEventListener("click", function(){
-    sliderModal(5)
+    sliderModal(5);
 })
 
 sliderContentCardsArray[6].children[2].addEventListener("click", function(){
-    sliderModal(6)
+    sliderModal(6);
 })
 
 sliderContentCardsArray[7].children[2].addEventListener("click", function(){
-    sliderModal(7)
+    sliderModal(7);
 })
 
 sliderContentCardsArray[8].children[2].addEventListener("click", function(){
-    sliderModal(8)
+    sliderModal(8);
 })
 
 sliderContentCardsArray[9].children[2].addEventListener("click", function(){
-    sliderModal(9)
+    sliderModal(9);
 })
 console.log(sliderContentCardsArray[0].children[2])
 function sliderModal(sliderElemetIndex){
@@ -124,4 +162,53 @@ function sliderModal(sliderElemetIndex){
     $(".modal-date").innerText = article[sliderElemetIndex].publishedAt;
     $(".modal-text").innerHTML = article[sliderElemetIndex].content;
     $(".modal-link").href = article[sliderElemetIndex].url;
+    titleChecker();
 }
+
+function saveArticle(e){
+    
+    if(saveButton.classList[3] === undefined){
+        saveButton.classList.add("modal-saved");
+        $("#articleSaveP").style.display = "initial";
+        $("#articleSaveP").innerText = "Article Saved";
+        saveArticleData();
+    }
+    else {
+        saveButton.classList.remove("modal-saved");
+        $("#articleSaveP").style.display = "initial";
+        $("#articleSaveP").innerText = "Article Removed";
+        removeArticle();
+    }
+        $("#articleSaveP").addEventListener("animationend", function(){
+            $("#articleSaveP").style.display = "none"
+        });
+}
+
+    function saveArticleData(){
+        let articleDataforSave = `${$(".modal-img").src}♩${$(".modal-title").innerText}♩${$(".modal-author").innerText}♩${ $(".modal-date").innerText}♩${ $(".modal-text").innerText}♩${ $(".modal-link").href}`;
+        localStorage.setItem(`${localCounter}`,articleDataforSave);
+        localCounter++;
+        titleCheck.push($(".modal-title").innerText);
+    }
+
+    function removeArticle(){
+        for(let i = 0; i<localStorage.length;i++){           
+            if($(".modal-title").innerText == localStorage.getItem(localStorage.key(i)).split("♩")[1])
+            {
+                localStorage.removeItem(localStorage.key(i));
+                titleCheck = titleCheck.filter(function (string) {
+                    return string != $(".modal-title").innerText;
+                });
+               break;
+            }
+    }
+}    
+
+
+
+
+
+
+
+
+console.log(titleCheck);
