@@ -1,0 +1,144 @@
+body {
+    margin: 0;
+}
+
+main {
+    margin: 7rem auto 0;
+    width: 80vw;
+}
+
+#search-div {
+    background-color: #ec4c4c;
+    color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 2rem;
+}
+
+#search {
+    height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+#search-input {
+    height: 92%;
+    flex-basis: 90%;
+    border: none;
+    padding-left: .5rem;
+}
+
+#search-submit {
+    height: 100%;
+    flex-basis: 10%;
+    margin-left: .5rem;
+    border: none;
+}
+
+#filters-div {
+    border-radius: 1rem;
+    background-color: #808080;
+    height: 2rem;
+    padding: 0 1rem;
+    transition: height .5s;
+    overflow: hidden;
+}
+
+#filters-filters {
+    margin: 0;
+    line-height: 2rem;
+    transition: opacity .5s;
+}
+
+#filters-actual {
+    opacity: 0%;
+    line-height: 2rem;
+    position: relative;
+    bottom: 0;
+    transition: all .5s;
+    font-size: 1rem;
+}
+
+#filter-dateFrom, #filter-dateTo {
+    height: 1.5rem;
+    border: none;
+    border-radius: .75rem;
+    padding-left: .5rem;
+}
+
+#filter-sortBy {
+    height: 1.5rem;
+    border: none;
+    border-radius: .75rem;
+}
+
+#filters-div:hover {
+    height: 7rem;
+}
+
+#filters-div:hover #filters-filters {
+    opacity: 0%;
+}
+
+#filters-div:hover #filters-actual {
+    opacity: 100%;
+    bottom: 2rem;
+}
+
+#display-content {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    row-gap: 1rem;
+    column-gap: 2%;
+    margin-bottom: 3rem;
+}
+
+.article-div {
+    height: 13rem;
+    overflow: hidden;
+    background-color: rgb(255,230,160);
+    border-radius: 2rem;
+}
+
+.article-imgDiv {
+    height: 100%;
+    width: 30%;
+    float: left;
+    background-color: red;
+    position: relative;
+    background-color: rgb(255,215,103);
+}
+
+.article-img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.article-title {
+    margin-left: 35%;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.article-description {
+    margin-left: 35%;
+    font-size: .8rem;
+}
+
+@media (max-width: 650px) {
+    main {
+        width: 90vw;
+    }
+    #display-content {
+        grid-template-columns: 100%;
+    }
+}

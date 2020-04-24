@@ -29,12 +29,13 @@ h4 {
 
 .allSavedArticles {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
+    
 }
 
 .savedArticle{
-    margin: 1em;
+    margin: 1em 2em;
     width: 18em;
     background-color: #ec4c4c;
     height: 40em;

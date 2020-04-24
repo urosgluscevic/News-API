@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/headerAndFooter.css">
+    <link rel="stylesheet" href="../style/list.css">
+    <title>Search News</title>
+</head>
+<body>
+    <header>
+        <img id = "logo"src="..\img\logo.png" alt="logo">
+        <nav>
+            <a class="header-link header-selected"href="/index.html">HOME</a>
+            <a class="header-link"href="/pages/list.html">LIST</a>
+            <a class="header-link"href="">CUSTOM</a>
+            <div id="hover-to-dropdown">
+                <a class="link-to-dropdown"href="">ABOUT</a>
+                <div id="dropdown-content">
+                    <a class="dropdown-link"href="">Miodrag</a> 
+                    <a class="dropdown-link"href="">Luka</a>
+                    <a class="dropdown-link"href="">Uroš</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div id="search-div">
+            <div id="search">
+                <input type="text" id="search-input" placeholder="Type here">
+                <button id="search-submit">Search</button>
+            </div>
+            <div id="filters-div">
+                <p id="filters-filters">Filters</p>
+                <div id="filters-actual">
+                    <p>Show only articles published from <input id="filter-dateFrom" type="date"> to <input id="filter-dateTo" type="date"></p>
+                    <p>Sort by <select id="filter-sortBy">
+                        <option>relevancy</option>
+                        <option>popularity</option>
+                        <option selected>time published</option>
+                    </select></p>
+                </div>
+            </div>
+        </div>
+        <div id="display-content">
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="inner_footer">
+            <div class="footer_top">
+                <div class="footer_branding">
+                        <img src="..\img\logo.png" alt="logo">
+                </div>
+                <div class="footer_links">
+                    <h4>Useful links</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">List</a></li>
+                        <li><a href="#">Custom</a></li>
+                    </ul>
+                </div>
+                <div class="footer_links">
+                    <h4>About us</h4>
+                    <ul>
+                        <li><a href="#">Uroš</a></li>
+                        <li><a href="#">Luka</a></li>
+                        <li><a href="#">Miodrag</a></li>
+                    </ul>
+                </div>
+                <div class="footer_links">
+                    <h4>Sources</h4>
+                    <ul>
+                        <li><a href="#">News-API</a></li>
+                        <li><a href="#">Our Github</a></li>
+                        <li><a href="#">Contact us</a></li>
+                    </ul>
+                </div>
+                <div class="footer_social">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="footer_bottom">
+        <div class="footer_bottom_inner">
+            <span>By using our website you agree to our <a href="#">Terms of service</a><span><span class="copy_right">&copy;MUL inc.</span>
+        </div>
+    </div>
+
+    <script src="../js/list.js"></script>
+</body>
+</html>

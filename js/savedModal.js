@@ -6,15 +6,17 @@ function $$(string){
     return document.querySelectorAll(string);
 }
 
+let maximalLocalCounter = 0;
 let localCounter = 0;
 if(localStorage.length === 1) {
     localCounter = parseInt(localStorage.key(localStorage.length-1),10)+1;
 }
 
 for(let i = 1;i<localStorage.length;i++){
-    if(localStorage.key(i)>localStorage.key(i-1)){
-        localCounter = parseInt(localStorage.key(i),10)+1;
+    if(parseInt(localStorage.key(i),10)>maximalLocalCounter){
+        maximalLocalCounter = parseInt(localStorage.key(i),10);
     }
+    localCounter = maximalLocalCounter+1;
 }
 
 
