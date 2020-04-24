@@ -17,7 +17,7 @@ for(let i = 1;i<localStorage.length;i++){
     if(parseInt(localStorage.key(i),10)>maximalLocalCounter){
         maximalLocalCounter = parseInt(localStorage.key(i),10);
     }
-    localCounter = maximalLocalCounter+1;
+    localCounter = maximalLocalCounter+2;
 }
 
 
