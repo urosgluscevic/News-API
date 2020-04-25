@@ -103,7 +103,7 @@ function modalPopUp() {
             $(".modal-title").innerText = article[i].title;
             $(".modal-author").innerText = article[i].author;
             $(".modal-date").innerText = article[i].publishedAt;
-            $(".modal-text").innerHTML = article[i].content;
+            $(".modal-text").innerHTML = article[i].description;
             $(".modal-link").href = article[i].url;
         }   
     }
