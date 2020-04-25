@@ -7,17 +7,13 @@ function $$(string){
 }
 let maximalLocalCounter = 0;
 let localCounter = 0;
-if(localStorage.length === 1) {
-    localCounter = parseInt(localStorage.key(localStorage.length-1),10)+1;
-}
 
-let maxLocalCounter = 0;
 
-for(let i = 1;i<localStorage.length;i++){
+for(let i = 0;i<localStorage.length;i++){
     if(parseInt(localStorage.key(i),10)>maximalLocalCounter){
         maximalLocalCounter = parseInt(localStorage.key(i),10);
     }
-    localCounter = maximalLocalCounter+2;
+    localCounter = maximalLocalCounter+1;
 }
 
 
