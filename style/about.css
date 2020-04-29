@@ -1,12 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto;
+}
+
+
+
 main{
     width: 100%;
     height: 120rem;
     margin: 10% 0;
 }
 
+.titleDev h2{
+ width: 100%;
+ text-align: center;
+ color: #857b7b;
+ font-size: 60px;
+ margin-bottom: 1em;
+}
+
 .developer{
     width: 100%;
     height: 25%;
-
     border: 2px solid black;
+}
+
+#miodrag {
+    background-color: #ec4c4c;
+    border:none;
+    box-shadow: 8px 11px 10px 0px rgba(0,0,0,0.75);
+    width: 60%;
+    margin: 0 auto;
+    transition: all 0.4s linear;
+    margin-bottom: 5em;
+    display: flex;
+    height: 15%;
+    color: white;
+    width: 95%;
+    height: 26%;
+    box-shadow: none;
+    overflow: hidden;
+}
+
+
+
+.miodrag-left{
+    width: 40%;
+    height: 100%;
+
+}
+
+.miodrag-left img {
+    height: 1000px;
+    object-fit: cover;
+    margin: auto;
+}
+
+
+
+@keyframes miodragRotate{
+    0%{
+        transform:rotate(0deg);
+    
+    }
+    100%{
+        transform:rotate(360deg);
+    }
+}
+
+
+
+.miodrag-right {
+    width: 50%;
+    margin: auto;
+    overflow: hidden;
+
+}
+
+
+
+.miodrag-right h3 {
+    text-align: center;
+    color: white;
+    margin: auto;
+    font-size: 60px;
+    transition: all 1s linear;
+}
+
+.miodrag-right hr {
+    margin: auto;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 0%;
+    height: 2px;
+    border: none;
+    background-color:#ffc343;
+    transition: width 0.5s linear;
+}
+
+
+#miodrag:hover{
+
+}
+
+#miodrag:hover .miodrag-left img{
+    animation: miodragRotate 4s infinite;
+}
+
+
+
+#miodrag:hover .miodrag-right hr {
+    width: 100%;
+}
+
+
+
+.miodrag-button {
+    position: relative;
+    margin: auto auto;
+    display: block;
+    width: 100px;
+    height: 110px;
+
+}
+
+#miodrag p {
+    display: none;
+    animation: miodragPopUp 4s linear;
+}
+
+@keyframes miodragPopUp {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+#miodrag:hover p{
+    animation: miodragPopUp 1s linear;
+    display: block;
+}
+
+
+#miodrag button {
+    animation: miodragPopUp 1s linear;
+    display: none;
+    background-color: #F2EA02;
+    color: white;
+    padding: 1em;
+    margin: auto;
+    border: #E6FB04 solid 2px;
+    margin-top: 4em;
+}
+
+#miodrag:hover #miodragButton{
+    display: block;
+}
+
+#miodrag a {
+    color: white;
+    text-decoration: none;
 }
