@@ -4,7 +4,9 @@
     font-family: Roboto;
 }
 
-
+header {
+    z-index: 3;
+}
 
 main{
     width: 100%;
@@ -163,4 +165,81 @@ main{
 #miodrag a {
     color: white;
     text-decoration: none;
+}
+
+#luka {
+    background-color: #ec4c4c;
+    border: none;
+    border-radius: 1rem;
+    width: 90vw;
+    margin: 3rem auto;
+    position: relative;
+}
+
+#luka h3 {
+    display: inline-block;
+    color: white;
+    width: 57vw;
+    text-align: center;
+    margin: 2rem;
+    font-size: 2rem;
+}
+
+#luka-description {
+    background-color: rgb(241, 147, 147);
+    display: inline-block;
+    width: 41vw;
+    padding: 0 1vw;
+    margin: 0 7vw;
+    border-radius: 1rem;
+}
+
+#luka p {
+    display: inline-block;
+    text-align: justify;
+    line-height: 1.5rem;
+    margin: .5rem;
+}
+
+#luka-link {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    border-radius: .5rem;
+    padding: 0.3rem;
+    background-color: #ec4c4c;
+}
+
+#chungus-div {
+    width: 30vw;
+    height: 40vw;
+    position: absolute;
+    margin: auto;
+    right: 3vw;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    border-radius: .5rem;
+}
+
+#chungus {
+    width: 100%;
+    transition: filter 1s linear;
+}
+
+#chungus-thug {
+    z-index: 2;
+    width: 60%;
+    position: absolute;
+    left: 30%;
+    top: -8%;
+    transition: top 1s linear;
+}
+
+#chungus-div:hover #chungus {
+    filter: grayscale(100%);
+}
+
+#chungus-div:hover #chungus-thug {
+    top: 45%;
 }
