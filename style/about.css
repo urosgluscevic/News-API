@@ -100,9 +100,7 @@ main{
 }
 
 
-#miodrag:hover{
 
-}
 
 #miodrag:hover .miodrag-left img{
     animation: miodragRotate 4s infinite;
