@@ -10,8 +10,11 @@ header {
 
 main{
     width: 100%;
+
     height: 140rem;
+
     margin: 10% 0;
+    padding: 5rem 0;
 }
 
 .titleDev h2{
@@ -24,7 +27,6 @@ main{
 
 .developer{
     width: 100%;
-    height: 25%;
     border: 2px solid black;
 }
 
@@ -174,31 +176,37 @@ main{
     width: 90vw;
     margin: 3rem auto;
     position: relative;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#luka-text {
+    flex-basis: 54vw;
 }
 
 #luka h3 {
     display: inline-block;
     color: white;
-    width: 57vw;
+    width: 100%;
     text-align: center;
-    margin: 2rem;
+    margin: 2rem 0;
     font-size: 2rem;
 }
 
 #luka-description {
     background-color: rgb(241, 147, 147);
-    display: inline-block;
-    width: 41vw;
-    padding: 0 1vw;
-    margin: 0 7vw;
+    display: block;
+    width: 70%;
+    padding: .5vw 1vw;
+    margin: 0 auto;
     border-radius: 1rem;
 }
 
 #luka p {
-    display: inline-block;
     text-align: justify;
     line-height: 1.5rem;
-    margin: .5rem;
+    margin: .5rem auto;
 }
 
 #luka-link {
@@ -210,16 +218,17 @@ main{
     background-color: #ec4c4c;
 }
 
+#luka-img {
+    flex-basis: 36vw;
+}
+
 #chungus-div {
     width: 30vw;
     height: 40vw;
-    position: absolute;
-    margin: auto;
-    right: 3vw;
-    top: 0;
-    bottom: 0;
     overflow: hidden;
-    border-radius: .5rem;
+    border-radius: 1rem;
+    position: relative;
+    margin: 0 auto;
 }
 
 #chungus {
@@ -242,4 +251,19 @@ main{
 
 #chungus-div:hover #chungus-thug {
     top: 45%;
+}
+
+@media (max-width: 800px) {
+    #luka {
+        flex-direction: column;
+    }
+
+    #luka-img {
+        margin-top: 1rem;
+    }
+
+    #chungus-div {
+        width: 50vw;
+        height: 66.7vw;
+    }
 }
