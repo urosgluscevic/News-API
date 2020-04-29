@@ -131,10 +131,7 @@
 	}
 }
 
-#modal-save:active{
-    color: green;
-    animation: none;
-}
+
 
 .modal-saved{
     color: green;
