@@ -145,6 +145,10 @@ main {
     font-size: .8rem;
 }
 
+.remains-hidden{
+    display: none;
+}
+
 @media (max-width: 650px) {
     main {
         width: 90vw;

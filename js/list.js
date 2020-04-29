@@ -25,13 +25,26 @@ async function searchNews(words, sortBy, dateFrom, dateTo) {
             articleImgDiv = document.createElement("div"),
             articleImg = document.createElement("img"),
             articleTitle = document.createElement("p")
-            articleDescription = document.createElement("p")
+            articleDescription = document.createElement("p"),
+            hiddenAuthor = document.createElement("p"),
+            hiddenUrl = document.createElement("p"),
+            hiddenTime = document.createElement("p")
         
         articleDiv.className = "article-div"
         articleImgDiv.className = "article-imgDiv"
         articleImg.className = "article-img"
         articleTitle.className = "article-title"
         articleDescription.className = "article-description"
+
+
+        hiddenAuthor.className = "remains-hidden"
+        hiddenUrl.className = "remains-hidden"
+        hiddenTime.className = "remains-hidden"
+
+        hiddenAuthor.textContent = article.author;
+        hiddenTime.textContent = article.publishedAt;
+        hiddenUrl.textContent = article.url;
+
 
         articleImg.src = article.urlToImage
         articleTitle.textContent = article.title
@@ -41,7 +54,12 @@ async function searchNews(words, sortBy, dateFrom, dateTo) {
         articleDiv.appendChild(articleImgDiv)
         articleDiv.appendChild(articleTitle)
         articleDiv.appendChild(articleDescription)
-        displayContent.appendChild(articleDiv)
+
+        articleDiv.appendChild(hiddenAuthor)
+        articleDiv.appendChild(hiddenTime)
+        articleDiv.appendChild(hiddenUrl)
+
+        displayContent.appendChild(articleDiv)        
     }
 }
 
