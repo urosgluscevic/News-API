@@ -14,6 +14,7 @@ main{
 
     margin: 10% 0;
     padding: 5rem 0;
+    position: relative;
 }
 
 .titleDev h2{
@@ -29,21 +30,21 @@ main{
     height: 33%;
 
     border: 2px solid black;
+    position: relative;
 }
 
 #miodrag {
+    position: relative;
     background-color: #ec4c4c;
     border:none;
     box-shadow: 8px 11px 10px 0px rgba(0,0,0,0.75);
-    width: 60%;
     margin: 0 auto;
     transition: all 0.4s linear;
     margin-bottom: 5em;
     display: flex;
-    height: 15%;
+    height: 35em;
     color: white;
     width: 95%;
-    height: 26%;
     box-shadow: none;
     overflow: hidden;
 }
@@ -53,6 +54,7 @@ main{
 .miodrag-left{
     width: 40%;
     height: 100%;
+    position: relative;
 
 }
 
@@ -80,7 +82,7 @@ main{
     width: 50%;
     margin: auto;
     overflow: hidden;
-
+    z-index: 2;
 }
 
 
