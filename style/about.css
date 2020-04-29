@@ -149,6 +149,11 @@ main{
     }
 }
 
+@media (max-width: 600px) {
+    #miodrag h3{
+        font-size: 40px;
+    }
+}
 
 
 #miodrag:hover p{
