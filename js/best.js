@@ -10,7 +10,6 @@ async function fillBest(contentOfBest, indexOfBestChild) {
     })
 
     bestArticles = await bestNews.json()
-    console.log(bestArticles)
 
     contentOfBest.children[1].textContent = bestArticles.articles[indexOfBestChild].title;
     contentOfBest.children[0].firstElementChild.src = bestArticles.articles[indexOfBestChild].urlToImage;

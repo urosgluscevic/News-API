@@ -22,14 +22,12 @@ function correctWidth() {
         topRatedGridBaseHeight = 22.5
         numOfAddedRows = Math.ceil(numOfAddedArticles / 3)
 
-        console.log("desktop")
     } else {
         mainBaseHeight = 85
         topRatedBaseHeight = 38.125
         topRatedGridBaseHeight = 34
         numOfAddedRows = Math.ceil(numOfAddedArticles / 2)
 
-        console.log("mobile")
     }
 
     for (let i = 0; i < numOfAddedRows; i++) {
@@ -108,7 +106,6 @@ async function fillNews(item, index) {
         }
     })
     data = await response.json()
-    // console.log(data.articles.length)
     item.children[0].textContent = data.articles[index].title
     item.children[1].textContent = data.articles[index].description
     item.children[2].firstElementChild.src = data.articles[index].urlToImage
