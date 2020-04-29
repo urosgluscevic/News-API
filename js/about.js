@@ -11,11 +11,11 @@ window.addEventListener("load", function(){
     var aboutHeaderHeight = aboutHeader.clientHeight;
 
     if(scrollToDeveloper === "Miodrag"){
-        scrollTo(0, 0);
-    } else if(scrollToDeveloper === "Luka"){
         scrollTo(0, aboutHeaderHeight + miodragHeight);
-    } else if(scrollToDeveloper === "Uros"){
+    } else if(scrollToDeveloper === "Luka"){
         scrollTo(0, aboutHeaderHeight+  lukaHeight + miodragHeight);
+    } else if(scrollToDeveloper === "Uros"){
+        scrollTo(0,0);
     } else if(scrollToDeveloper === "ABOUT"){
         scrollTo(0, 0);
     }

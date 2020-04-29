@@ -10,14 +10,7 @@ header {
 
 main{
     width: 100%;
-<<<<<<< HEAD
-
-    height: 140rem;
-=======
-    height: 130rem;
->>>>>>> 53e1e42831da159b67623b6a76fdec5a7bf93edc
-
-    margin: 10% 0;
+    margin: 0 0 10% 0;
     padding: 5rem 0;
     position: relative;
 }
@@ -33,12 +26,12 @@ main{
 .developer{
     width: 100%;
     height: 33%;
-
     border: 2px solid black;
     position: relative;
 }
 
 #miodrag {
+
     position: relative;
     background-color: #ec4c4c;
     border:none;
@@ -187,7 +180,7 @@ main{
     border: none;
     border-radius: 1rem;
     width: 90vw;
-    margin: 3rem auto;
+    margin: 3rem auto 0 auto;
     position: relative;
     padding: 1rem;
     display: flex;
