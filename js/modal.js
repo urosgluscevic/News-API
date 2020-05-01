@@ -198,13 +198,7 @@ function saveArticle(e){
                break;
             }
     }
+
 }    
 
-
-
-
-
-
-
-
-
+}    

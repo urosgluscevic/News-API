@@ -108,7 +108,7 @@ async function fillNews(item, index) {
         }
     })
     data = await response.json()
-    
+
     item.children[0].textContent = data.articles[index].title
     item.children[1].textContent = data.articles[index].description
     item.children[2].firstElementChild.src = data.articles[index].urlToImage
