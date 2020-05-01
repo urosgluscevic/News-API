@@ -4,6 +4,8 @@ body {
     margin: 0;
 }
 
+
+
 main {
     margin: 7rem auto 0;
     width: 80vw;
@@ -157,3 +159,4 @@ main {
         grid-template-columns: 100%;
     }
 }
+

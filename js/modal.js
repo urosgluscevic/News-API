@@ -52,7 +52,7 @@ document.querySelector("#modalCloseButton").addEventListener("click",() => {
     modal.style.display="none";
 });
 
-//SJUTRA CU DODAT DA SE POPUNI CONTENT ODOH DA SPAVAM!
+
 
 var bestElementOne = document.getElementById("best-one");
 bestElementOne.addEventListener("click", modalPopUpBestOne)
@@ -198,4 +198,7 @@ function saveArticle(e){
                break;
             }
     }
+
+}    
+
 }    

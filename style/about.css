@@ -11,9 +11,8 @@ header {
 main{
     width: 100%;
 
-    height: 140rem;
+    margin: 0 0 10% 0;
 
-    margin: 10% 0;
     padding: 5rem 0;
     position: relative;
 }
@@ -29,12 +28,12 @@ main{
 .developer{
     width: 100%;
     height: 33%;
-
     border: 2px solid black;
     position: relative;
 }
 
 #miodrag {
+
     position: relative;
     background-color: #ec4c4c;
     border:none;
@@ -145,6 +144,11 @@ main{
     }
 }
 
+@media (max-width: 600px) {
+    #miodrag h3{
+        font-size: 40px;
+    }
+}
 
 
 #miodrag:hover p{
@@ -178,7 +182,7 @@ main{
     border: none;
     border-radius: 1rem;
     width: 90vw;
-    margin: 3rem auto;
+    margin: 3rem auto 0 auto;
     position: relative;
     padding: 1rem;
     display: flex;

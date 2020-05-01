@@ -16,9 +16,9 @@
         <nav>
             <a class="header-link"href="/index.html">HOME</a>
             <a class="header-link"href="/html/list.html">LIST</a>
-            <a class="header-link"href="/html/saved.html">CUSTOM</a>
+            <a class="header-link"href="/html/saved.html">SAVED</a>
             <div id="hover-to-dropdown">
-                <a class="link-to-dropdown header-selected"href="">ABOUT</a>
+                <a class="link-to-dropdown"href="">ABOUT</a>
                 <div id="dropdown-content">
                     <a class="dropdown-link"href="#miodrag">Miodrag</a> 
                     <a class="dropdown-link"href="#luka">Luka</a> 
@@ -29,6 +29,32 @@
     </header>
 
     <main>
+            <div class="titleDev"><h2>Meet our Devs</h2></div>
+                <div class="developer" id="uros">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front">
+                    <img src="../img/uros.jpg" alt="Avatar" style="width:300px;height:300px;">
+                  </div>
+                  <div class="flip-card-back">
+                    <h1>Uros Gluscevic</h1> 
+                    <p>Student at Grammar School "Slobodan Skerovic"</p> 
+                    <p>Podgorica, Montenegro</p>
+                    <p>You can find my Github <a id="uros-github" target="_blank" href="https://github.com/urosgluscevic/">here</a></p>
+                  </div>
+                </div>
+            </div>
+
+            <div id="fact-container-uros">
+                <button id="uros-btn"class="meet-me-btn">Get to know me!</button>
+                <p id="uros-facts">Click the button to get a trivial fact about me!</p>
+            </div>
+
+        </div>
+
+
+
+
         <div class="developer" id="miodrag">
             <div class="miodrag-left">
                 <img src="..\img\developers\retard.png" alt="">
@@ -58,28 +84,7 @@
             </div>
         </div>
 
-        <div class="developer" id="uros">
 
-            <div class="flip-card">
-                <div class="flip-card-inner">
-                  <div class="flip-card-front">
-                    <img src="../img/uros.jpg" alt="Avatar" style="width:300px;height:300px;">
-                  </div>
-                  <div class="flip-card-back">
-                    <h1>Uros Gluscevic</h1> 
-                    <p>Student at Grammar School "Slobodan Skerovic"</p> 
-                    <p>Podgorica, Montenegro</p>
-                    <p>You can find my Github <a id="uros-github" target="_blank" href="https://github.com/urosgluscevic/">here</a></p>
-                  </div>
-                </div>
-            </div>
-
-            <div id="fact-container-uros">
-                <button id="uros-btn"class="meet-me-btn">Get to know me!</button>
-                <p id="uros-facts">Click the button to get a trivial fact about me!</p>
-            </div>
-
-        </div>
     
     </main>
 
@@ -92,25 +97,25 @@
                 <div class="footer_links">
                     <h4>Useful links</h4>
                     <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">List</a></li>
-                        <li><a href="#">Custom</a></li>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="list.html">List</a></li>
+                        <li><a href="saved.html">Saved</a></li>
                     </ul>
                 </div>
                 <div class="footer_links">
                     <h4>About us</h4>
                     <ul>
-                        <li><a href="#">Uroš</a></li>
-                        <li><a href="#">Luka</a></li>
-                        <li><a href="#">Miodrag</a></li>
+                        <li><a href="about.html">Uros</a></li>
+                        <li><a href="about.html">Luka</a></li>
+                        <li><a href="about.html">Miodrag</a></li>
                     </ul>
                 </div>
                 <div class="footer_links">
                     <h4>Sources</h4>
                     <ul>
-                        <li><a href="#">News-API</a></li>
-                        <li><a href="#">Our Github</a></li>
-                        <li><a href="#">Contact us</a></li>
+                        <li><a href="https://newsapi.org/" target="blanc">News-API</a></li>
+                        <li><a href="https://github.com/urosgluscevic/News-API" target="blanc">Our Github</a></li>
+                        <li><a href="mailto:jumbazix@gmail.com" target="blanc">Contact us</a></li>
                     </ul>
                 </div>
                 <div class="footer_social">
@@ -124,5 +129,6 @@
 
     <script src="../js/about.js"></script>
     <script src="../js/aboutUros.js"></script>
+    <script src="../js/header.js"></script>
 </body>
 </html>

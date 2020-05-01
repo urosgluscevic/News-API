@@ -22,11 +22,13 @@ function correctWidth() {
         topRatedGridBaseHeight = 22.5
         numOfAddedRows = Math.ceil(numOfAddedArticles / 3)
 
+
     } else {
         mainBaseHeight = 85
         topRatedBaseHeight = 38.125
         topRatedGridBaseHeight = 34
         numOfAddedRows = Math.ceil(numOfAddedArticles / 2)
+
 
     }
 
@@ -106,6 +108,7 @@ async function fillNews(item, index) {
         }
     })
     data = await response.json()
+
     item.children[0].textContent = data.articles[index].title
     item.children[1].textContent = data.articles[index].description
     item.children[2].firstElementChild.src = data.articles[index].urlToImage
@@ -116,3 +119,6 @@ for (let i = 0; i < topRated.length; i++){
     fillNews(topRated[i], i)
     alreadyUsed++; //since the first i articles have been used, they will be ignored from now on
 }
+
+
+console.log('"nA sAmoM kRaJu u KoNZOli nE Bi trEbAlo niŠtA da sE ŠtAMpa, uKloNiTe sVe mEtOde coNsOle obJeKtA"');
