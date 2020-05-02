@@ -16,8 +16,16 @@ async function fillBest(contentOfBest, indexOfBestChild) {
 
     contentOfBest.children[1].textContent = bestArticles.articles[indexOfBestChild].title;
     contentOfBest.children[0].firstElementChild.src = bestArticles.articles[indexOfBestChild].urlToImage;
+
+    if(indexOfBestChild === bestCards.length-1){
+        loading--;
+        removeLoading();
+        }
+    
 }
 
 for (let i = 0; i < bestCards.length; i++){
-    fillBest(bestCards[i], i)
+    fillBest(bestCards[i], i);
+    
 }
+

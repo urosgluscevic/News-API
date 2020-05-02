@@ -5,7 +5,7 @@ var newsContainer = document.getElementById("top-rated");
 var newsContainerGrid = document.getElementById("top-rated-grid");
 var main = document.getElementById("main");
 
-
+let loading = 3;
 let numOfAddedArticles = 0
 
 window.addEventListener("resize", correctWidth)
@@ -112,13 +112,28 @@ async function fillNews(item, index) {
     item.children[0].textContent = data.articles[index].title
     item.children[1].textContent = data.articles[index].description
     item.children[2].firstElementChild.src = data.articles[index].urlToImage
+    if(index === topRated.length-1){
+        loading--;
+        removeLoading();
+        }
+    
 }
 
 let topRated = document.querySelectorAll(".top-rated-item")
 for (let i = 0; i < topRated.length; i++){
     fillNews(topRated[i], i)
     alreadyUsed++; //since the first i articles have been used, they will be ignored from now on
+    
 }
 
 
 console.log('"nA sAmoM kRaJu u KoNZOli nE Bi trEbAlo niŠtA da sE ŠtAMpa, uKloNiTe sVe mEtOde coNsOle obJeKtA"');
+
+function removeLoading(){
+if(loading==0){
+    document.querySelector(".loading").style.animation="loadingGone 2s linear";
+    document.querySelector(".loading").addEventListener("animationend",(e)=>{
+        document.querySelector(".loading").style.display="none";
+    })
+}
+}
