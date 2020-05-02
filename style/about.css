@@ -62,19 +62,13 @@ main{
     height: 1000px;
     object-fit: cover;
     margin: auto;
+    transition: all 1s linear;
+    transform: scale(1.2) rotate(10deg);
+    filter: blur(10px);
 }
 
 
 
-@keyframes miodragRotate{
-    0%{
-        transform:rotate(0deg);
-    
-    }
-    100%{
-        transform:rotate(360deg);
-    }
-}
 
 
 
@@ -110,7 +104,10 @@ main{
 
 
 #miodrag:hover .miodrag-left img{
-    animation: miodragRotate 4s infinite;
+    transform: scale(1) rotate(0deg);
+    filter: blur(0);
+
+
 }
 
 
@@ -147,6 +144,10 @@ main{
 @media (max-width: 600px) {
     #miodrag h3{
         font-size: 40px;
+    }
+
+    #miodrag p{
+        font-size: 13px;
     }
 }
 

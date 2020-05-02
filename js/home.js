@@ -131,6 +131,7 @@ console.log('"nA sAmoM kRaJu u KoNZOli nE Bi trEbAlo niŠtA da sE ŠtAMpa, uKloN
 
 function removeLoading(){
 if(loading==0){
+    document.querySelector(".loadingText").style.display="none";
     document.querySelector(".loading").style.animation="loadingGone 2s linear";
     document.querySelector(".loading").addEventListener("animationend",(e)=>{
         document.querySelector(".loading").style.display="none";

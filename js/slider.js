@@ -15,7 +15,7 @@ var mouseInSlider = false;
 
 
 function foreward(e) {
-    let moveBySize = sliderCont[5].clientWidth + 10;//this variable is defined every time the function is called. This way, the slider content moves for its whole length, regardless of the viewport width; the +10 is the margin
+    let moveBySize = sliderCont[5].clientWidth + ((document.querySelector(".Hot-News").clientWidth/100)*0.93);//this variable is defined every time the function is called. This way, the slider content moves for its whole length, regardless of the viewport width; the +10 is the margin
         if(screen.width <= 650){
             moveBySize = sliderCont[5].clientWidth;
         }
@@ -37,7 +37,7 @@ function foreward(e) {
     slider.style.transform= "translateX(" + (-moveBySize * sliderContentCounter) + "px)"; //moves the content
 }
 
-setInterval(foreward,3000,2);
+
 
 function mouseEnterHandler(){
     mouseInSlider = true;
