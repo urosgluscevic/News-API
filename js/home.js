@@ -21,15 +21,11 @@ function correctWidth() {
         topRatedBaseHeight = 26.625
         topRatedGridBaseHeight = 22.5
         numOfAddedRows = Math.ceil(numOfAddedArticles / 3)
-
-
     } else {
         mainBaseHeight = 85
         topRatedBaseHeight = 38.125
         topRatedGridBaseHeight = 34
         numOfAddedRows = Math.ceil(numOfAddedArticles / 2)
-
-
     }
 
     for (let i = 0; i < numOfAddedRows; i++) {
@@ -38,7 +34,6 @@ function correctWidth() {
         topRatedGridBaseHeight += 11.5
     }
     
-
     main.style.height = mainBaseHeight + "rem"
     newsContainer.style.height = topRatedBaseHeight + "rem"
     newsContainerGrid.style.height = topRatedGridBaseHeight + "rem"
@@ -72,6 +67,10 @@ function loadMoreHandler(){
             imageSpot.classList.add("top-rated-img");
 
             imgContainer.appendChild(imageSpot);
+
+            if(data.articles[alreadyUsed].title == null || data.articles[alreadyUsed].description == null){
+                newBlock.style.display = "none"; //articles with no title or description are not displayed
+            }
 
             newBlock.appendChild(paragraph1);
             newBlock.appendChild(paragraph2);
@@ -109,6 +108,10 @@ async function fillNews(item, index) {
     })
     data = await response.json()
 
+    if(data.articles[index].title === null || data.articles[index].description === null){
+        item.style.display = "none"; //articles with no title or description are not displayed
+    }
+
     item.children[0].textContent = data.articles[index].title
     item.children[1].textContent = data.articles[index].description
     item.children[2].firstElementChild.src = data.articles[index].urlToImage
@@ -125,9 +128,6 @@ for (let i = 0; i < topRated.length; i++){
     alreadyUsed++; //since the first i articles have been used, they will be ignored from now on
     
 }
-
-
-console.log('"nA sAmoM kRaJu u KoNZOli nE Bi trEbAlo niŠtA da sE ŠtAMpa, uKloNiTe sVe mEtOde coNsOle obJeKtA"');
 
 function removeLoading(){
 if(loading==0){

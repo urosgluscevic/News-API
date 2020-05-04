@@ -22,7 +22,8 @@ var urosFactArray = [
     "I like reading classic novels. My favourite author is Honore de Balzac, but my favourite book, 'Martin Eaden', was written by Jack London.",
     "I trained with the National Pioneers Volleyball Team of Montenegro.",
     "I play volleyball, chess, and I enjoy skiing",
-    "Volunteering is very important to me, and I try to devote as much of my free time to it as possible."
+    "Volunteering is very important to me, and I try to devote as much of my free time to it as possible.",
+    "I'm very skilled with cards, both as a magician and a poker player"
 ];
 
 var backupUrosFacts = [...urosFactArray];

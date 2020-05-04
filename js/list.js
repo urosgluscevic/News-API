@@ -64,6 +64,9 @@ async function searchNews(words, sortBy, dateFrom, dateTo) {
 }
 
 searchSubmit.addEventListener("click", () => {
+
+    clearSearchedNews()
+
     let sortBy = filterSortBy.value
     if (sortBy === "time published")
         sortBy = "publishedAt"
@@ -73,3 +76,27 @@ searchSubmit.addEventListener("click", () => {
     
     searchNews(searchInput.value, sortBy, filterDateFrom.value, filterDateTo.value)
 })
+
+document.addEventListener("keypress", (e) => {
+    if(e.key === "Enter"){
+        clearSearchedNews()
+
+        let sortBy = filterSortBy.value
+        if (sortBy === "time published")
+            sortBy = "publishedAt"
+
+        for (article of displayContent.children)
+            displayContent.removeChild(article)
+    
+        searchNews(searchInput.value, sortBy, filterDateFrom.value, filterDateTo.value)
+    }
+})
+
+function clearSearchedNews(){
+    const searchedArticlesContainer = document.getElementById("display-content");
+    let numberOfArticlesToDelete = searchedArticlesContainer.children.length;
+
+    for(let i = 0; i < numberOfArticlesToDelete; i++){
+        searchedArticlesContainer.removeChild(searchedArticlesContainer.children[0]);
+    }
+}
