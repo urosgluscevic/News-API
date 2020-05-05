@@ -11,9 +11,7 @@ async function fillBest(contentOfBest, indexOfBestChild) {
 
     bestArticles = await bestNews.json()
 
-    if(data.articles[indexOfBestChild].title == null || data.articles[indexOfBestChild].description == null){
-        contentOfBest.style.display = "none"; //articles with no title or description are not displayed
-    }
+   
 
     contentOfBest.children[1].textContent = bestArticles.articles[indexOfBestChild].title;
     contentOfBest.children[0].firstElementChild.src = bestArticles.articles[indexOfBestChild].urlToImage;

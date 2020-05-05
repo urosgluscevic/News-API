@@ -68,9 +68,6 @@ function loadMoreHandler(){
 
             imgContainer.appendChild(imageSpot);
 
-            if(data.articles[alreadyUsed].title == null || data.articles[alreadyUsed].description == null){
-                newBlock.style.display = "none"; //articles with no title or description are not displayed
-            }
 
             newBlock.appendChild(paragraph1);
             newBlock.appendChild(paragraph2);
