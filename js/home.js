@@ -105,9 +105,6 @@ async function fillNews(item, index) {
     })
     data = await response.json()
 
-    if(data.articles[index].title === null || data.articles[index].description === null){
-        item.style.display = "none"; //articles with no title or description are not displayed
-    }
 
     item.children[0].textContent = data.articles[index].title
     item.children[1].textContent = data.articles[index].description
