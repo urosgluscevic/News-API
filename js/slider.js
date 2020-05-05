@@ -14,6 +14,9 @@ document.addEventListener("keydown", manualSliderController)
 var mouseInSlider = false;
 
 
+setInterval(foreward,3000,2);
+
+
 function foreward(e) {
     let moveBySize = sliderCont[5].clientWidth + ((document.querySelector(".Hot-News").clientWidth/100)*0.93);//this variable is defined every time the function is called. This way, the slider content moves for its whole length, regardless of the viewport width; the +10 is the margin
         if(screen.width <= 650){

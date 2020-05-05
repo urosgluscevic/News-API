@@ -52,11 +52,12 @@ nav {
 }
 
 #hover-to-dropdown{
-    height: 4.5rem;
     width: 25%;
     line-height: 4.5rem;
     text-align: center;
     color: white;
+    transition: border-bottom 0.2s linear;
+    transition: height 0.2s linear;
 }
 
 .link-to-dropdown{
@@ -79,6 +80,11 @@ nav {
     
 }
 
+
+.antitrain{
+    height: 4.5rem;
+}
+
 #hover-to-dropdown:hover #dropdown-content{ /*the hidden dropdown list appears*/
     display: flex;
     flex-direction: column;
@@ -89,6 +95,10 @@ nav {
     height: 4.25rem;
 }
 
+.selected-about{
+    border-bottom: #ffc343 4px solid;
+    height: 4.25em;
+}
 
 .dropdown-link{
     width: 100%;
