@@ -229,6 +229,7 @@ main{
 
 #luka-img {
     flex-basis: 36vw;
+    overflow: hidden;
 }
 
 #chungus-div {
@@ -245,22 +246,6 @@ main{
     transition: filter 1s linear;
 }
 
-#chungus-thug {
-    z-index: 2;
-    width: 60%;
-    position: absolute;
-    left: 30%;
-    top: -8%;
-    transition: top 1s linear;
-}
-
-#chungus-div:hover #chungus {
-    filter: grayscale(100%);
-}
-
-#chungus-div:hover #chungus-thug {
-    top: 45%;
-}
 
 @media (max-width: 800px) {
     #luka {
